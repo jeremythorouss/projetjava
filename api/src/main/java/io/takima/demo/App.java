@@ -1,10 +1,9 @@
 package io.takima.demo;
 
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-//test pour voir si la bracnhe marche
+//test pour voir si la bracnhe marche2
 @SpringBootApplication
 @EnableWebMvc
 public class App {
