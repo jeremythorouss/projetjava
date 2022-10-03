@@ -8,8 +8,9 @@ import {PubliqueComponent} from "./publique/publique.component";
 const routes: Routes = [
   {path:'admin', component: AdminComponent},
   {path:'publique', component: PubliqueComponent},
-  {path:'', component: ListUsersComponent},
+  {path:'list-users', component: ListUsersComponent},
   {path:'add-user', component: AddUserComponent},
+
 ];
 
 

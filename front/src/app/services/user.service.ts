@@ -14,19 +14,20 @@ export class UserService {
   private url: string;
 
   constructor(private http: HttpClient) {
+    //this.url = environment.url;
     this.url = environment.url;
   }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.url}/users`);
+    return this.http.get<User[]>(`${this.url}/users/list-users`);
   }
 
   addUser(user: User): Observable<User> {
-    return this.http.post<any>(`${this.url}/users`, user);
+    return this.http.post<any>(`${this.url}/add-users`, user);
   }
 
   deleteUser(id: bigint | null): Observable<any> {
-    return this.http.delete(`${this.url}/users/${id}`);
+    return this.http.delete(`${this.url}/delete-users/${id}`);
   }
 
 }

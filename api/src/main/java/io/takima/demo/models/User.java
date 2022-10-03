@@ -1,6 +1,7 @@
 package io.takima.demo.models;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -9,21 +10,20 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Column(name = "age")
-    private Integer age;
+    @Column(name = "Name")
+    private String Name;
+    @Column(name = "Email")
+    private String Email;
+    @Column(name = "Birthdate")
+    private Date Birthdate;
 
     public User() {
     }
-
-    public User(Long id, String firstName, String lastName, Integer age) {
+    public User(Long id, String Name, String Email, Date Birthdate) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+        this.Name = Name;
+        this.Email = Email;
+        this.Birthdate = Birthdate;
     }
 
     public Long getId() {
@@ -34,50 +34,52 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return Name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setEmail(String email) {
+        Email = email;
     }
 
-    public Integer getAge() {
-        return age;
+    public Date getBirthdate() {
+        return Birthdate;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setBirthdate(Date birthdate) {
+        Birthdate = birthdate;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(age, user.age);
-    }
 
+        return Objects.equals(id, user.id) && Objects.equals(Name, user.Name) && Objects.equals(Email, user.Email) && Objects.equals(Birthdate, user.Birthdate);
+    }
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, age);
+        return Objects.hash(id, Name, Email, Birthdate);
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
+                ", Name='" + Name + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Birthdate=" + Birthdate +
                 '}';
     }
+
+
+
 }
