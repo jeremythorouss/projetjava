@@ -2,13 +2,17 @@ package io.takima.demo.controllers;
 
 import io.takima.demo.UserDAO;
 import io.takima.demo.models.User;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin
-@RequestMapping("users")
+//@CrossOrigin
+//@RequestMapping("users")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/users")
+//@RequestMapping("/list-users")
 @RestController
 public class UserController {
 
@@ -18,7 +22,7 @@ public class UserController {
         this.userDAO = userDAO;
     }
 
-    @GetMapping("")
+    @GetMapping("/list-users")
     public List<User> listUsers() {
         Iterable<User> it = userDAO.findAll();
         List <User> users = new ArrayList<>();
