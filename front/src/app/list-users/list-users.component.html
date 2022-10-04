@@ -14,9 +14,9 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td>{{user.id}}</td>
-      <td>{{user.Name}}</td>
-      <td>{{user.Email}}</td>
-      <td>{{user.Birthdate}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.birthdate  | date: "dd/MM/yyyy"}}</td>
       <td><a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a></td>
     </tr>
     </tbody>

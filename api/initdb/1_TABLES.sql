@@ -1,4 +1,4 @@
-Drop table  users
+Drop table  users;
 
 create table users
 (

@@ -1,4 +1,4 @@
-INSERT INTO defaultdb.users (id, Name, Email, Birthdate) VALUES (1, 'Paul', 'Harrohide', 01/01/2022);
+INSERT INTO defaultdb.users (id, Name, Email, Birthdate) VALUES (1, 'Paul', 'Harrohide', '2022-05-14');
 INSERT INTO defaultdb.users (id, Name, Email, Birthdate) VALUES (2, 'Harry', 'Covert', null);
 INSERT INTO defaultdb.users (id, Name, Email, Birthdate) VALUES (3, 'Alain', 'Posteur', null);
 INSERT INTO defaultdb.users (id, Name, Email, Birthdate) VALUES (4, 'Elvire', 'Debord', null);
