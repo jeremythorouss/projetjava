@@ -9,6 +9,8 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import {FormsModule} from "@angular/forms";
 import {AdminComponent} from "./admin/admin.component";
 import {PubliqueComponent} from "./publique/publique.component";
+import { ListDateComponent } from './list-date/list-date.component';
+import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {PubliqueComponent} from "./publique/publique.component";
     AddUserComponent,
     ListUsersComponent,
     AdminComponent,
-    PubliqueComponent
+    PubliqueComponent,
+    ListDateComponent,
+    ReserveRoomComponent
   ],
   imports: [
     BrowserModule,
