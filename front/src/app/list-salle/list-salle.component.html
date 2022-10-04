@@ -6,22 +6,24 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Birthdate</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Capacite</th>
+      <th scope="col">equipement</th>
       <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{user.id}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.birthdate  | date: "dd/MM/yyyy"}}</td>
-      <td><a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a></td>
+    <tr *ngFor="let salle of salles">
+      <td>{{salle.id}}</td>
+      <td>{{salle.name}}</td>
+      <td>{{salle.photo}}</td>
+      <td>{{salle.capacite}}</td>
+      <td>{{salle.equipement}}</td>
+      <td><a class="btn btn-danger" (click)="deleteSalle(salle.id)">Delete</a></td>
     </tr>
     </tbody>
   </table>
-  <a class="btn btn-primary" (click)="addUser()" >ajouter des membres </a>
+  <a class="btn btn-primary" (click)="addSalle()" >ajouter des salles </a>
   <a class="btn btn-primary" (click)="showMe()"> T'es ou ?</a>
   <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
 </div>

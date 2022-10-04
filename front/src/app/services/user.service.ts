@@ -23,11 +23,12 @@ export class UserService {
   }
 
   addUser(user: User): Observable<User> {
-    return this.http.post<any>(`${this.url}/add-users`, user);
+    console.log(user)
+    return this.http.post<any>(`${this.url}/users/add-user`, user);
   }
 
   deleteUser(id: bigint | null): Observable<any> {
-    return this.http.delete(`${this.url}/delete-users/${id}`);
+    return this.http.delete(`${this.url}/users/${id}`);
   }
 
 }

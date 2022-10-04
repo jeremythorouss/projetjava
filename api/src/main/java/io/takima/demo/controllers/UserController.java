@@ -35,7 +35,7 @@ public class UserController {
         userDAO.deleteById(id);
     }
 
-    @PostMapping("")
+    @PostMapping("/add-user")
     public void adduser(@RequestBody User user) {
         userDAO.save(user);
     }
