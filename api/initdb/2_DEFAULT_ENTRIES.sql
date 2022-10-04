@@ -8,3 +8,6 @@ INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (7, 'Gaston', 'L
 INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (8, 'Gisèle', 'Detable', null);
 INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (9, 'Thomas', 'Ouaque', null);
 INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (10, 'Sacha', 'Telfrize', null);
+
+
+INSERT INTO defaultdb.salles (id, name, photo,  capacite , equipement) VALUES (1,'salle',null,10,'projecteur');

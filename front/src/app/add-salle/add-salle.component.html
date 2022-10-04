@@ -1,0 +1,59 @@
+<!-- formulaire add-user -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+
+        <div class="form-group">
+          <label for="name">
+            name
+          </label>
+          <input type="text" id="name" class="form-control" name="name" ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">
+            photo
+          </label>
+          <input type="text" id="photo" class="form-control" name="photo" ngModel>
+        </div>
+        <!--
+               <div class="form-group">
+                 <label for="capacite"> capacite
+                 </label>
+                 <input type="text" id="capacite" class="form-control" name="capacite"
+                        min="1" max="100">
+               </div>
+
+               -->
+
+        <div class="form-group">
+          <label for="capacite">
+            capacite
+          </label>
+          <input type="text" id="capacite" class="form-control" name="capacite" ngModel>
+        </div>
+        <!--
+        <div class="form-group">
+          <label for="equipement">
+            equipement
+          </label>
+          <select name="equipement" id="equipement">
+            <option value="projecteur">projecteur</option>
+            <option value="caméra">caméra</option>
+            <option value="ordinateur">ordinateur</option>
+            <option value="casques">casques</option>
+          </select>
+        </div>
+                       -->
+        <div class="form-group">
+          <label for="equipement">
+            equipement
+          </label>
+          <input type="text" id="equipement" class="form-control" name="equipement" ngModel>
+        </div>
+        <button class="btn btn-primary" type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</div>
