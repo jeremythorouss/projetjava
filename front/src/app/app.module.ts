@@ -13,7 +13,7 @@ import { ListDateComponent } from './list-date/list-date.component';
 import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ //声明本模块中拥有的视图类: 组件、指令和管道
     AppComponent,
     AddUserComponent,
     ListUsersComponent,
@@ -29,6 +29,6 @@ import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //整个模块的根组件
 })
 export class AppModule { }
