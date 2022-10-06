@@ -1,30 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../../models/user.model";
 import {HttpClient} from "@angular/common/http";
 import {UserService} from "../services/user.service";
+import {ReserveSalle} from "../../models/reservesalle.model";
+import {RESERVESALLES} from '../mock-reserveSalle';
 
 @Component({
   selector: 'app-reserve-room',
   templateUrl: './reserve-room.component.html',
   styleUrls: ['./reserve-room.component.scss']
 })
+
 export class ReserveRoomComponent implements OnInit {
   estCeQuilEstLa= false;
-  users: User[];
+  reservesalles = RESERVESALLES;
+  selectedSalle?: ReserveSalle;
+
 
   constructor(private http: HttpClient, private userService: UserService) {
-    this.users=[];
+    //this.reservesalles=[];
   }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(users => this.users = users)
+
   }
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
   }
-
-  deleteUser(id: bigint | null){
-    this.userService.deleteUser(id).subscribe(() => this.users = this.users.filter(user => user.id !== id));
+  onSelect(reservesalle: ReserveSalle): void {
+    this.selectedSalle = reservesalle;
   }
+  /*deleteSalle(id: bigint | null){
+    this.salleService.deleteSalle(id).subscribe(() => this.salles = this.salles.filter(salle => salle.id !== id));
+  }*/
 
 }

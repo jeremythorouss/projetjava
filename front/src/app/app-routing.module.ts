@@ -6,6 +6,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
+import {ReserveRoomComponent} from "./reserve-room/reserve-room.component";
 
 const routes: Routes = [
   {path:'admin', component: AdminComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'add-user', component: AddUserComponent},
   {path:'list-salles', component: ListSalleComponent},
   {path:'add-salle', component: AddSalleComponent},
+  {path:'reserve-room', component: ReserveRoomComponent},
 
 ];
 

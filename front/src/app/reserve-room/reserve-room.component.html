@@ -4,19 +4,19 @@
     <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Birthdate</th>
+      <th scope="col">Date</th>
+      <th scope="col">Hour</th>
+      <th scope="col">reservesalle</th>
       <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{user.id}}</td>
-      <td>{{user.Name}}</td>
-      <td>{{user.Email}}</td>
-      <td>{{user.Birthdate}}</td>
-      <td><a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a></td>
+    <tr *ngFor="let reservesalle of reservesalles">
+      <td>{{reservesalle.id}}</td>
+      <td>{{reservesalle.Date}}</td>
+      <td>{{reservesalle.Hour}}</td>
+      <td>{{reservesalle.Names}}</td>
+      <td><a class="btn btn-danger" (click)="onSelect(reservesalle)">Select</a></td>
     </tr>
     </tbody>
   </table>

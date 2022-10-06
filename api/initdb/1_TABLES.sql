@@ -20,3 +20,13 @@ create table salles
     capacite int null,
     equipement varchar(255)  null
 );
+Drop table  reservesalles;
+create table reservesalles
+(
+    id bigint auto_increment,
+    constraint reservesalles_pk
+        primary key (id),
+    date varchar(255) not null,
+    hour varchar(255) null,
+    names varchar(255) null
+);
