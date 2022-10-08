@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { AddUserComponent } from './add-user/add-user.component';
 import { ListUsersComponent } from './list-users/list-users.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AdminComponent} from "./admin/admin.component";
 import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
-//import {EditUserComponent} from "./edit-user/edit-user.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 
 @NgModule({
@@ -23,14 +23,15 @@ import {AddSalleComponent} from "./add-salle/add-salle.component";
     PubliqueComponent,
     ListSalleComponent,
     AddSalleComponent,
-    ListSalleComponent
-    //EditUserComponent
+    ListSalleComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
