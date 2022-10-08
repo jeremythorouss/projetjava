@@ -11,7 +11,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
-import {EditUserComponent} from "./edit-user/edit-user.component";
+//import {EditUserComponent} from "./edit-user/edit-user.component";
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import {EditUserComponent} from "./edit-user/edit-user.component";
     PubliqueComponent,
     ListSalleComponent,
     AddSalleComponent,
-    ListSalleComponent,
-    EditUserComponent
+    ListSalleComponent
+    //EditUserComponent
   ],
   imports: [
     BrowserModule,
