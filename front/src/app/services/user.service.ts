@@ -34,4 +34,23 @@ export class UserService {
     console.log(user)
     return this.http.post<any>(`${this.url}/users/edit-user`, user);
   }
+  getAll() {
+    return this.http.get<User[]>(this.url);
+  }
+
+  getById(id: string) {
+    return this.http.get<User>(`${this.url}/${id}`);
+  }
+
+  create(params: any) {
+    return this.http.post(this.url, params);
+  }
+
+  update(id: string, params: any) {
+    return this.http.put(`${this.url}/${id}`, params);
+  }
+
+  delete(id: string) {
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'add-user', component: AddUserComponent},
   {path:'list-salles', component: ListSalleComponent},
   {path:'add-salle', component: AddSalleComponent},
-  //{path:'edit-user',component: EditUserComponent},
+  {path:'edit-user',component: AddUserComponent},
 
 ];
 
