@@ -67,6 +67,8 @@ onSubmit(ngForm: NgForm) {
         this.user = userResponse;
         console.log("user")
         console.log(this.user)
+        //this.user.birthdate=this.user.birthdate.getDate()
+
         // ngForm.form.value.name = this.user.name;
         // ngForm.form.value.email = this.user.email;
         // ngForm.form.value.birthdate = this.user.birthdate;

@@ -18,6 +18,7 @@
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
       <td>{{user.birthdate  | date: "dd/MM/yyyy"}}</td>
+      <!--<td>{{user.birthdate  | date: "yyyy-MM-dd"}}</td>-->
       <td><a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a></td>
       <td><a class="btn btn-danger" (click)="editUser(user.id)">Edit</a></td>
     </tr>
