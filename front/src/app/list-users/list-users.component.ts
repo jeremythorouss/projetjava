@@ -36,6 +36,6 @@ export class ListUsersComponent implements OnInit {
     this.router.navigateByUrl("add-user")
   }
   editUser(id: bigint | null){
-    this.router.navigateByUrl("edit-users/:id")
+    this.router.navigateByUrl("edit-user/"+id)
   }
 }

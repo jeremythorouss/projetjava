@@ -13,6 +13,7 @@ import {User} from "../../models/user.model";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../services/user.service";
+import {toNumbers} from "@angular/compiler-cli/src/version_helpers";
 
 
 @Component({
@@ -40,35 +41,49 @@ onSubmit(ngForm: NgForm) {
   setTimeout(()=>this.router.navigateByUrl('/list-users'), 1000)
 
 }*/
-  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private userService: UserService, private router: Router) {
-  }
-
   id: number;
   private sub: any;
-  user: User;
-  users: User[];
+  user: User |null
+  users: User[]
+
+
+  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private userService: UserService, private router: Router) {
+    this.id = 0
+    this.user=null
+    this.users=[]
+  }
 
 
 
-
-  ngOnInit(ngForm: NgForm) {
+  ngOnInit() {
     this.sub = this.activatedrouter.params.subscribe(params => {
+
       this.id = +params['id'];
-      this.userService.getUserById(this.id);
-      ngForm.form.value.name = this.user.name;
-      ngForm.form.value.email = this.user.email;
-      ngForm.form.value.birthdate = this.user.birthdate;
-    }
+
+      console.log( this.id)
+      console.log( +params['id'])
+
+
+      this.userService.getUserById(this.id).subscribe(userResponse => {
+        this.user = userResponse;
+        console.log("user")
+        console.log(this.user)
+        // ngForm.form.value.name = this.user.name;
+        // ngForm.form.value.email = this.user.email;
+        // ngForm.form.value.birthdate = this.user.birthdate;
+      });
+
+    })
 
   }
 
   onSubmit(ngForm: NgForm) {
     console.log(ngForm);
     const user = new User(
-      this.id = +params['id'];
+      BigInt(this.id),
     ngForm.form.value.name,
-      ngForm.form.value.email,
-      ngForm.form.value.birthdate,
+    ngForm.form.value.email,
+    ngForm.form.value.birthdate
   )
 
     this.userService.addUser(user).subscribe();

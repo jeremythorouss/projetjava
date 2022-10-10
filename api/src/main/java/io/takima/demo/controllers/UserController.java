@@ -41,9 +41,13 @@ public class UserController {
         userDAO.save(user);
     }
 
-    @PostMapping("/edit-user/:id")
-    public void editUser(@PostUpdate User user, Long id) {
+    /*@PostMapping("/edit-user/{id}")
+    public void editUser(@PathVariable User user, Long id) {
         userDAO.save(user);
+    }*/
+    @GetMapping("/user/{id}")
+    public User getbyid(@PathVariable Long id) {
+        return userDAO.findById(id).get();
     }
 
 }
