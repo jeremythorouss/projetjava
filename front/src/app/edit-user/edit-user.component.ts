@@ -1,12 +1,14 @@
-import {  Component,
+import {
+  Component,
   EventEmitter,
   Input,
   OnInit,
   OnChanges,
   Output,
   SimpleChanges,
-  ChangeDetectionStrategy} from '@angular/core';
-import {FormBuilder,FormGroup, NgForm} from "@angular/forms";
+  ChangeDetectionStrategy
+} from '@angular/core';
+import {FormBuilder, FormGroup, NgForm} from "@angular/forms";
 import {User} from "../../models/user.model";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -38,36 +40,41 @@ onSubmit(ngForm: NgForm) {
   setTimeout(()=>this.router.navigateByUrl('/list-users'), 1000)
 
 }*/
-
-  id: number;
-  sub: any;
-  user: User;
-  users:User[];
-
-
-  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private userService: UserService) {
+  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private userService: UserService, private router: Router) {
   }
 
+  id: number;
+  private sub: any;
+  user: User;
+  users: User[];
+
+
+
+
   ngOnInit(ngForm: NgForm) {
-      this.user = this.activatedrouter.params.subscribe(params => {
+    this.sub = this.activatedrouter.params.subscribe(params => {
       this.id = +params['id'];
-      this.user.getUserById('id');
-      ngForm.form.value.name=this.name;
-      ngForm.form.value.email=this.email;
-      ngForm.form.value.birthdate=this.birthdate;
-
-  };
-
-    onUpdate(f: NgForm) {
-      ngForm.form.value.name
-      ngForm.form.value.email
-      ngForm.form.value.birthdate
+      this.userService.getUserById(this.id);
+      ngForm.form.value.name = this.user.name;
+      ngForm.form.value.email = this.user.email;
+      ngForm.form.value.birthdate = this.user.birthdate;
     }
 
+  }
 
+  onSubmit(ngForm: NgForm) {
+    console.log(ngForm);
+    const user = new User(
+      this.id = +params['id'];
+    ngForm.form.value.name,
+      ngForm.form.value.email,
+      ngForm.form.value.birthdate,
+  )
 
+    this.userService.addUser(user).subscribe();
+    setTimeout(() => this.router.navigateByUrl('/list-users'), 1000)
 
-
+  }
 
 
   /*constructor(private httpClient: HttpClient, private router: Router, private userService: UserService) {
@@ -108,7 +115,7 @@ onSubmit(ngForm: NgForm) {
 
   }*/
 
-}
+
 }
 
 

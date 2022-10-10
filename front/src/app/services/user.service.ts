@@ -30,7 +30,14 @@ export class UserService {
   deleteUser(id: bigint | null): Observable<any> {
     return this.http.delete(`${this.url}/users/${id}`);
   }
-  editUser(id: bigint | null, user:User: Observable<any> {
+  /*editUser(id: bigint | null, user:User: Observable<any> {
     return this.http.put<any>(`${this.url}/users/edit-user/${id}`,this.addUser(User));
-  }
+  }*/
+
+  getUserById( id: bigint | null): Observable<User[]> {
+    return this.http.get<User[id]>(`${this.url}/users/edit-user/${id}`);
+    }
+
 }
+
+
