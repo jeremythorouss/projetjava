@@ -86,8 +86,7 @@ export class AddUserComponent implements OnInit {
         .pipe(first())
         .subscribe({
           next: () => {
-            //this.alertService.success('User updated', { keepAfterRouteChange: true });
-            this.router.navigate(['../../'], { relativeTo: this.route });
+            this.router.navigateByUrl("list-users");
           },
           error: error => {
             //this.alertService.error(error);
