@@ -28,14 +28,14 @@ export class ListUsersComponent implements OnInit {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
   }
 
-  deleteUser(id: bigint | null){
+  deleteUser(id: number | null){
     this.userService.deleteUser(id).subscribe(() => this.users = this.users.filter(user => user.id !== id));
   }
 
   addUser() {
     this.router.navigateByUrl("add-user")
   }
-  editUser(id: bigint | null){
+  editUser(id: number | null){
     this.router.navigateByUrl("edit-user/"+id)
   }
 }

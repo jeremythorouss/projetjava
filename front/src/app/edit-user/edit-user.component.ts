@@ -43,13 +43,12 @@ onSubmit(ngForm: NgForm) {
 }*/
   id: number;
   private sub: any;
-  user: User |null
+  user:User|undefined
   users: User[]
 
 
   constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private userService: UserService, private router: Router) {
     this.id = 0
-    this.user=null
     this.users=[]
   }
 
@@ -80,7 +79,7 @@ onSubmit(ngForm: NgForm) {
   onSubmit(ngForm: NgForm) {
     console.log(ngForm);
     const user = new User(
-      BigInt(this.id),
+      this.id,
     ngForm.form.value.name,
     ngForm.form.value.email,
     ngForm.form.value.birthdate
