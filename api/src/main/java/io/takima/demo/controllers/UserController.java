@@ -5,6 +5,7 @@ import io.takima.demo.models.User;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.PostUpdate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,4 +40,10 @@ public class UserController {
     public void adduser(@RequestBody User user) {
         userDAO.save(user);
     }
+
+    @PostMapping("/edit-user/:id")
+    public void editUser(@PostUpdate User user, Long id) {
+        userDAO.save(user);
+    }
+
 }
