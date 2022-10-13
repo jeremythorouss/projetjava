@@ -1,21 +1,27 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {Observable} from "rxjs";
-import {Salle} from "../../models/salle.model";
+import { Observable, of } from 'rxjs';
+import {ReserveSalle} from "../../models/reservesalle.model";
+import { RESERVESALLES } from '../mock-reserveSalle';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ReserveSalleService {
-  private url: string;
+  //private url: string;
 
-  constructor(private http: HttpClient) {
-    this.url = environment.url;
+  constructor(private messageService: MessageService) {
+    //this.url = environment.url;
   }
-  getReserveSalle(): Observable<Salle[]> {
-    return this.http.get<Salle[]>(`${this.url}/salles/list-salles`);
+
+
+  getReserveSalle():  Observable<ReserveSalle[]> {
+    const reservesalles = of(RESERVESALLES);
+    this.messageService.add('ReserveSalleService: fetched reservesalle');
+    return reservesalles;
   }
 
 }

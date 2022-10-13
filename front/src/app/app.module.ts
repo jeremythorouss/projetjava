@@ -13,6 +13,7 @@ import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import { ListDateComponent } from './list-date/list-date.component';
 import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
     AddSalleComponent,
     ListDateComponent,
     ReserveRoomComponent,
-    ListSalleComponent
+    ListSalleComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,55 @@
 <!-- Tableau Angular -->
+<!--<a class="btn btn-danger" (click)="onSelect(reservesalle)">Select</a>-->
+
+<h2>My ReserveSalle</h2>
 <div class="container d-flex flex-column align-items-center justify-content-center">
   <table class="table table-dark table-striped table-group-divider">
     <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Salle</th>
       <th scope="col">Date</th>
       <th scope="col">Hour</th>
-      <th scope="col">reservesalle</th>
-      <th scope="col"></th>
+      <th scope="col">confirm</th>
+
     </tr>
     </thead>
-    <tbody>
+  <!--<ul class="reservesalles">
+    <li *ngFor="let reservesalle of reservesalles">
+      <button [class.selected]="reservesalle === selectedSalle" type="button" (click)="onSelect(reservesalle)">
+        <span class="badge">{{reservesalle.id}}</span>
+        <span class="name">{{reservesalle.Date}}</span>
+        <span class="name">{{reservesalle.Hour}}</span>
+        <span class="name">{{reservesalle.Names}}</span>
+      </button>
+    </li>  </ul>-->
+  <tbody>
     <tr *ngFor="let reservesalle of reservesalles">
-      <td>{{reservesalle.id}}</td>
-      <td>{{reservesalle.Date}}</td>
-      <td>{{reservesalle.Hour}}</td>
-      <td>{{reservesalle.Names}}</td>
-      <td><a class="btn btn-danger" (click)="onSelect(reservesalle)">Select</a></td>
+      <td >
+        <select type="" >
+          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.id}}</option>
+        </select>
+      </td>
+      <td>
+        <select routerLink="/app-list-salles" type="select" >
+        <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Names}}</option>
+        </select>
+      </td>
+      <td>
+        <select type="select" >
+          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Date}}</option>
+        </select>
+      </td>
+      <td>
+        <select type="select" >
+          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Hour}}</option>
+        </select>
+      </td>
+      <td>
+        <a class="btn btn-danger"  >Select</a>
+      </td>
     </tr>
-    </tbody>
+  </tbody>
+<!--<app-reserve-room-detail> [reservesalle]="selectedSalle"></app-reserve-room-detail>-->
   </table>
-  <a class="btn btn-primary" (click)="showMe()"> T'es ou ?</a>
-  <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
 </div>
