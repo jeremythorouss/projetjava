@@ -2,15 +2,16 @@
 import {User} from "./user.model";
 
 export class ReserveSalle {
-  id: number;
-  Date: number;
-  Hour: number;
-  Names: string;
+  id: bigint | null;
+  startdate: Date;
+  endate: Date;
+  name: string;
 
-  constructor(id: number, Date: number, Hour: number, Names: string) {
+  constructor(id: bigint | null, startdate: Date, endate: Date, name: string) {
     this.id = id;
-    this.Date = Date;
-    this.Hour = Hour;
-    this. Names = Names;
+    this.startdate = startdate;
+    this.endate = endate;
+    this.name = name;
   }
+
 }

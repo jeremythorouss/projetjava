@@ -7,22 +7,13 @@
     <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Salle</th>
-      <th scope="col">Date</th>
-      <th scope="col">Hour</th>
+      <th scope="col">SalleName</th>
+      <th scope="col">startdate</th>
+      <th scope="col">endate</th>
       <th scope="col">confirm</th>
 
     </tr>
     </thead>
-  <!--<ul class="reservesalles">
-    <li *ngFor="let reservesalle of reservesalles">
-      <button [class.selected]="reservesalle === selectedSalle" type="button" (click)="onSelect(reservesalle)">
-        <span class="badge">{{reservesalle.id}}</span>
-        <span class="name">{{reservesalle.Date}}</span>
-        <span class="name">{{reservesalle.Hour}}</span>
-        <span class="name">{{reservesalle.Names}}</span>
-      </button>
-    </li>  </ul>-->
   <tbody>
     <tr *ngFor="let reservesalle of reservesalles">
       <td >
@@ -32,17 +23,17 @@
       </td>
       <td>
         <select routerLink="/app-list-salles" type="select" >
-        <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Names}}</option>
+        <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>
         </select>
       </td>
       <td>
         <select type="select" >
-          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Date}}</option>
+          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.startdate}}</option>
         </select>
       </td>
       <td>
         <select type="select" >
-          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.Hour}}</option>
+          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.endate}}</option>
         </select>
       </td>
       <td>

@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {ReserveSalle} from "../../models/reservesalle.model";
 import {ReserveSalleService} from "../services/reserve-salle.service"
 import { MessageService } from '../services/message.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-reserve-room',
@@ -18,19 +19,20 @@ export class ReserveRoomComponent implements OnInit {
   selectedSalle?: ReserveSalle;
 
 
-  constructor(private messageService: MessageService, private reserveSalleService: ReserveSalleService) {
+  constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
     //this.reservesalles=[];
   }
 
   ngOnInit(): void {
     this.getReserveSalle();
+    this.addReserveSalle();
   }
 
-  onSelect(reservesalle: ReserveSalle): void {
-    this.selectedSalle = reservesalle;
-    this.messageService
-      .add(`ReserveRoomComponent: Selected reservesalle id=${reservesalle.id}`);
-  }
+  // onSelect(reservesalle: ReserveSalle): void {
+  //   this.selectedSalle = reservesalle;
+  //   this.messageService
+  //     .add(`ReserveRoomComponent: Selected reservesalle id=${reservesalle.id}`);
+  // }
   //retrieve the reservesalles from the service.
   //subscribe() passes the emitted array to the callback,
   // which sets the component's heroes property.
@@ -38,6 +40,14 @@ export class ReserveRoomComponent implements OnInit {
     this.reserveSalleService.getReserveSalle()
         .subscribe((reservesalles )=> this.reservesalles = reservesalles);
   }
+
+
+  addReserveSalle():void {
+
+    this.reserveSalleService.addReserveSalle()
+      .subscribe( reservesalle => this.reservesalles.push(reservesalle));
+  }
+
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
