@@ -3,6 +3,7 @@ package io.takima.demo.controllers;
 import io.takima.demo.SalleDAO;
 import io.takima.demo.models.Salle;
 
+import io.takima.demo.models.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -30,12 +31,17 @@ public class SalleController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public void deleteSalle(@PathVariable Long id) {
         salleDAO.deleteById(id);
     }
 
     @PostMapping("/add-salle")
-    public void adduser(@RequestBody Salle salle) {
+    public void addsalle(@RequestBody Salle salle) {
         salleDAO.save(salle);
+    }
+
+    @GetMapping("/salle/{id}")
+    public Salle getbyid(@PathVariable Long id) {
+        return salleDAO.findById(id).get();
     }
 }

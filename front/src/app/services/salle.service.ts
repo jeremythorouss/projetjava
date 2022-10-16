@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {Salle} from "../../models/salle.model";
+import {User} from "../../models/user.model";
 
 @Injectable({
   providedIn: 'root'
@@ -27,8 +28,12 @@ export class SalleService {
     return this.http.post<any>(`${this.url}/salles/add-salle`, salle);
   }
 
-  deleteSalle(id: bigint | null): Observable<any> {
+  deleteSalle(id: number | null): Observable<any> {
     return this.http.delete(`${this.url}/salles/${id}`);
+  }
+  getSalleById( id: number | null): Observable<Salle> {
+    console.log('id : ' , id)
+    return this.http.get<Salle>(`${this.url}/salles/salle/${id}`);
   }
 
 }

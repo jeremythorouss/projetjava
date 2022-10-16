@@ -26,7 +26,8 @@ export class AddSalleComponent implements OnInit {
       ngForm.form.value.name,
       ngForm.form.value.photo,
       ngForm.form.value.capacite,
-      ngForm.form.value.equipement,
+      ngForm.form.value.equipement
+
     )
     console.log('Salle :', Salle)
 
