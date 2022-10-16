@@ -28,11 +28,14 @@ export class ListSalleComponent implements OnInit {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
   }
 
-  deleteSalle(id: bigint | null){
+  deleteSalle(id: number | null){
     this.salleService.deleteSalle(id).subscribe(() => this.salles = this.salles.filter(salle => salle.id !== id));
   }
 
   addSalle() {
     this.router.navigateByUrl("add-salle")
+  }
+  editSalle(id: number | null){
+    this.router.navigateByUrl("edit-salle/"+id)
   }
 }

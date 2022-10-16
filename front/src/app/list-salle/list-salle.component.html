@@ -10,6 +10,7 @@
       <th scope="col">Capacite</th>
       <th scope="col">equipement</th>
       <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
       <td>{{salle.capacite}}</td>
       <td>{{salle.equipement}}</td>
       <td><a class="btn btn-danger" (click)="deleteSalle(salle.id)">Delete</a></td>
+      <td><a class="btn btn-danger" (click)="editSalle(salle.id)">Edit</a></td>
     </tr>
     </tbody>
   </table>

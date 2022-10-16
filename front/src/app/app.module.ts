@@ -12,6 +12,7 @@ import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
+import {EditSalleComponent} from "./edit-salle/edit-salle.component";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {EditUserComponent} from "./edit-user/edit-user.component";
     ListSalleComponent,
     AddSalleComponent,
     ListSalleComponent,
-    EditUserComponent
+    EditUserComponent,
+    EditSalleComponent
   ],
   imports: [
     BrowserModule,

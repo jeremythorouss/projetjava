@@ -7,6 +7,7 @@ import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
+import {EditSalleComponent} from "./edit-salle/edit-salle.component";
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'list-salles', component: ListSalleComponent},
   {path:'add-salle', component: AddSalleComponent},
   //{path:'edit-user',component: EditUserComponent},
-  { path: 'edit-user/:id', component: EditUserComponent }
+  { path: 'edit-user/:id', component: EditUserComponent },
+  { path: 'edit-salle/:id', component: EditSalleComponent }
 ];
 
 
