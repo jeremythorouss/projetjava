@@ -7,15 +7,10 @@ import {PubliqueComponent} from "./publique/publique.component";
 import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {ReserveRoomComponent} from "./reserve-room/reserve-room.component";
-<<<<<<< Updated upstream
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import {EditSalleComponent} from "./edit-salle/edit-salle.component";
 
 import {ListReserveRoomComponent} from "./list-reserve-room/list-reserve-room.component";
-
-=======
-import {ListReserveRoomComponent} from "./list-reserve-room/list-reserve-room.component";
->>>>>>> Stashed changes
 
 const routes: Routes = [
   {path:'admin', component: AdminComponent},

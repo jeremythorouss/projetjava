@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs=12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
     <h2>My ReserveSalle</h2>
-    <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div id="user-info" ngModelGroup="userData" #userData="ngModelGroup">
 <!--      <div id="reserve-room" *ngFor="let reservesalle of reservesalles">-->
         <div class="form-group">

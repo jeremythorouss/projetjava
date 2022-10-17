@@ -32,7 +32,6 @@ export class ReserveRoomComponent implements OnInit {
         username:suggestedName,
       },
       roomId: 'id3',
-      comment: ''
     })
     //this.signupForm.form.patchValue(
     // {userDatea:{
@@ -47,12 +46,18 @@ export class ReserveRoomComponent implements OnInit {
     // this.addReserveSalle();
   }
 
-  onSubmit(){
-    console.log(this.signupForm);
-    // this.selectedSalle = reservesalle;
-    // this.messageService
-    //   .add(`ReserveRoomComponent: Selected reservesalle id=${reservesalle.id}`);
-  }
+  onSubmit(ngForm: NgForm){
+    console.log(ngForm);
+    const reservesalle = new ReserveSalle(
+      null,
+      ngForm.form.value.startdate,
+      ngForm.form.value.endate,
+      ngForm.form.value.name,)
+    this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
+    setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
+
+    }
+
 
   //retrieve the reservesalles from the service.
   //subscribe() passes the emitted array to the callback,

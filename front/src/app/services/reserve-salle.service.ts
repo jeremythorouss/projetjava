@@ -22,7 +22,7 @@ export class ReserveSalleService {
 
   addReserveSalle(reservesalle: ReserveSalle): Observable<ReserveSalle> {
     console.log(reservesalle);
-    return this.http.post<ReserveSalle>(`${this.url}/reservesalles/add-salle`, reservesalle)
+    return this.http.post<ReserveSalle>(`${this.url}/reservesalles/serve-room`, reservesalle)
 
   }
 

@@ -20,8 +20,8 @@ public class ReserveSalleController {
         this.ReserveSalleDAO = ReserveSalleDAO;
     }
 
-    @GetMapping("/reserve-room")
-    public List<ReserveSalle> listSalles() {
+    @GetMapping("/list-reserve-room")
+    public List<ReserveSalle> listReserveSalles() {
         Iterable<ReserveSalle> it = ReserveSalleDAO.findAll();
         List <ReserveSalle> reservesalles = new ArrayList<>();
         it.forEach(reservesalle -> reservesalles.add(reservesalle));
