@@ -1,9 +1,8 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {catchError, Observable, of, pipe, throwError} from 'rxjs';
+import { Observable} from 'rxjs';
 import {ReserveSalle} from "../../models/reservesalle.model";
-import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +21,7 @@ export class ReserveSalleService {
 
   addReserveSalle(reservesalle: ReserveSalle): Observable<ReserveSalle> {
     console.log(reservesalle);
-    return this.http.post<ReserveSalle>(`${this.url}/reservesalles/serve-room`, reservesalle)
+    return this.http.post<any>(`${this.url}/reservesalles/reserve-room`, reservesalle)
 
   }
 

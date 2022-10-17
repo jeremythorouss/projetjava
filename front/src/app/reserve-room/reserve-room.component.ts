@@ -2,7 +2,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ReserveSalle} from "../../models/reservesalle.model";
 import {ReserveSalleService} from "../services/reserve-salle.service"
-import { MessageService } from '../services/message.service';
 import {Router} from "@angular/router";
 import {NgForm} from '@angular/forms';
 
@@ -15,33 +14,33 @@ import {NgForm} from '@angular/forms';
 export class ReserveRoomComponent implements OnInit {
   estCeQuilEstLa= false;
 
-  reservesalles :ReserveSalle[] = [];
-
-  selectedSalle?: ReserveSalle;
+  // reservesalles :ReserveSalle[] = [];
+  //
+  // selectedSalle?: ReserveSalle;
 
   @ViewChild('f') signupForm?: NgForm;
 
-  defaultChoice = 'id1';
-  comment ='';
+  defaultChoice = 'date1';
 
 
   suggestUserName() {
     const suggestedName = 'MollyXXX';
     this.signupForm?.setValue({
       userData: {
-        username:suggestedName,
+        username: suggestedName,
       },
       roomId: 'id3',
     })
+  }
     //this.signupForm.form.patchValue(
     // {userDatea:{
     //    username: suggestedName}})
-  }
+
   constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
-    this.reservesalles=[];
+    //this.reservesalles=[];
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     // this.getReserveSalle();
     // this.addReserveSalle();
   }
@@ -62,15 +61,11 @@ export class ReserveRoomComponent implements OnInit {
   //retrieve the reservesalles from the service.
   //subscribe() passes the emitted array to the callback,
   // which sets the component's heroes property.
-  getReserveSalle(): void {
-    this.reserveSalleService.getReserveSalle()
-        .subscribe((reservesalles )=> this.reservesalles = reservesalles);
-  }
+  // getReserveSalle(): void {
+  //   this.reserveSalleService.getReserveSalle()
+  //       .subscribe((reservesalles )=> this.reservesalles = reservesalles);
+  // }
 
-  addReserveSalle():void {
-    // this.reserveSalleService.addReserveSalle()
-    //   .subscribe( reservesalle => this.reservesalles.push(reservesalle));
-  }
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
