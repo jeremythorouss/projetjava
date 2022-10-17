@@ -14,9 +14,7 @@ import java.util.List;
 //@RequestMapping("/list-users")
 @RestController
 public class SalleController {
-
     private final SalleDAO salleDAO;
-
 
     public SalleController(SalleDAO salleDAO) {
         this.salleDAO = salleDAO;

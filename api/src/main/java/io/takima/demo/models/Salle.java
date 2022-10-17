@@ -58,7 +58,8 @@ public class Salle {
         if (this == o) return true;
         if (!(o instanceof Salle)) return false;
         Salle salle = (Salle) o;
-        return capacite == salle.capacite && Objects.equals(id, salle.id) && Objects.equals(name, salle.name) && Objects.equals(photo, salle.photo) && Objects.equals(equipement, salle.equipement);
+        return capacite == salle.capacite && Objects.equals(id, salle.id) && Objects.equals(name, salle.name)
+                && Objects.equals(photo, salle.photo) && Objects.equals(equipement, salle.equipement);
     }
 
     @Override

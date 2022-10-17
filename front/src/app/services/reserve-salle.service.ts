@@ -3,7 +3,6 @@ import {HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http"
 import {environment} from "../../environments/environment";
 import {catchError, Observable, of, pipe, throwError} from 'rxjs';
 import {ReserveSalle} from "../../models/reservesalle.model";
-import { RESERVESALLES } from '../mock-reserveSalle';
 import { MessageService } from './message.service';
 
 @Injectable({
@@ -18,7 +17,7 @@ export class ReserveSalleService {
   }
 
   getReserveSalle(): Observable<ReserveSalle[]> {
-    return this.http.get<ReserveSalle[]>(`${this.url}/reservesalles/reserve-room`);
+    return this.http.get<ReserveSalle[]>(`${this.url}/reservesalles/list-reserve-room`);
   }
 
   addReserveSalle(reservesalle: ReserveSalle): Observable<ReserveSalle> {

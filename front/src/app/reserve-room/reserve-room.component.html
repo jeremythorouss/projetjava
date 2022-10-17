@@ -1,46 +1,85 @@
 <!-- Tableau Angular -->
-<!--<a class="btn btn-danger" (click)="onSelect(reservesalle)">Select</a>-->
+<div class="container">
+  <div class="row">
+    <div class="col-xs=12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <h2>My ReserveSalle</h2>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <div id="user-info" ngModelGroup="userData" #userData="ngModelGroup">
+<!--      <div id="reserve-room" *ngFor="let reservesalle of reservesalles">-->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            ngModel
+            name="username"
+            required
+            username
+            #username = "ngModel">
+          <span class="help-block" *ngIf="!username.valid && username.touched ">
+            Please enter a valid username!!</span>
+          <div></div>
+          <button
+            class="btn btn-default"
+            type="button"
+            (click)="suggestUserName()">Suggest a Username </button>
+        </div>
+        <p *ngIf="!userData.valid && userData.touched">UserData is inValid</p>
+      </div>
+      <div id="reserve-room">
+          <div class="form-group">
+            <label for="reserve-room">Select Room</label>
+            <select
+              id="room-id"
+              class="form-control"
+              type="select"
+              [ngModel] = "defaultChoice"
+              name="roomId">
+              <option value="id1">Room_id: 1 </option>
+              <option value="id2">Room_id: 2 </option>
+              <option value="id3">Room_id: 3 </option>
+             </select>
+            <label for="reserve-room">Select Date</label>
+            <select
+              id="room-date"
+              class="form-control"
+              type="select"
+              [ngModel] = "defaultChoice"
+              name="roomId">
+              <option value="date1">Date 1 </option>
+              <option value="date2">Date 1  </option>
+              <option value="date3">Date 1  </option>
+            </select>
+          </div>
+        <div class="form-group">
+<!--          <textarea-->
+<!--            name="comment"-->
+<!--            rows="3"-->
+<!--            class="form-control"-->
+<!--            [(ngModel)]="comment">-->
+<!--          </textarea>-->
+<!--          <p>Your comments: {{comment}}</p>-->
+        </div>
+      </div>
 
-<h2>My ReserveSalle</h2>
-<div class="container d-flex flex-column align-items-center justify-content-center">
-  <table class="table table-dark table-striped table-group-divider">
-    <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">SalleName</th>
-      <th scope="col">startdate</th>
-      <th scope="col">endate</th>
-      <th scope="col">confirm</th>
-
-    </tr>
-    </thead>
-  <tbody>
-    <tr *ngFor="let reservesalle of reservesalles">
-      <td >
-        <select type="" >
-          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.id}}</option>
-        </select>
-      </td>
-      <td>
-        <select routerLink="/app-list-salles" type="select" >
-        <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>
-        </select>
-      </td>
-      <td>
-        <select type="select" >
-          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.startdate}}</option>
-        </select>
-      </td>
-      <td>
-        <select type="select" >
-          <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.endate}}</option>
-        </select>
-      </td>
-      <td>
-        <a class="btn btn-danger"  >Select</a>
-      </td>
-    </tr>
-  </tbody>
-<!--<app-reserve-room-detail> [reservesalle]="selectedSalle"></app-reserve-room-detail>-->
-  </table>
+<!--          <div class="form-group">-->
+<!--            <select id="name" class="form-control" type="select" ngModel name="name" >-->
+<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <select id="startdate" class="form-control" type="select" ngModel name="startdate">-->
+<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <select id="endate" class="form-control" type="select" type="select" ngModel name="endate">-->
+<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
+<!--            </select>-->
+<!--          </div>-->
+        <button class="btn btn-default" type="button" (click)="getReserveSalle()">Submit </button>
+      </form>
+    </div>
+  </div>
 </div>

@@ -26,7 +26,7 @@ create table reservesalles
     id bigint auto_increment,
     constraint reservesalles_pk
         primary key (id),
-    date varchar(255) not null,
-    hour varchar(255) null,
-    names varchar(255) null
+    startdate datetime null,
+    endate datetime null,
+    name varchar(255) not null
 );
