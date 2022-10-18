@@ -22,20 +22,6 @@ export class ReserveRoomComponent implements OnInit {
 
   defaultChoice = 'date1';
 
-
-  suggestUserName() {
-    const suggestedName = 'MollyXXX';
-    this.signupForm?.setValue({
-      userData: {
-        username: suggestedName,
-      },
-      roomId: 'id3',
-    })
-  }
-    //this.signupForm.form.patchValue(
-    // {userDatea:{
-    //    username: suggestedName}})
-
   constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
     //this.reservesalles=[];
   }
@@ -65,7 +51,6 @@ export class ReserveRoomComponent implements OnInit {
   //   this.reserveSalleService.getReserveSalle()
   //       .subscribe((reservesalles )=> this.reservesalles = reservesalles);
   // }
-
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
