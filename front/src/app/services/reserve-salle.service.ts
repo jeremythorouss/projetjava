@@ -31,12 +31,12 @@ export class ReserveSalleService {
   //   this.messageService.add('ReserveSalleService: fetched reservesalle');
   //   return reservesalles;
   // }
-  deleteReserveSalle(id: bigint | null): Observable<any> {
+  deleteReserveSalle(id: number | null): Observable<any> {
     return this.http.delete(`${this.url}/reservesalles/${id}`);
   }
   getReserveSalleById( id: number | null): Observable<ReserveSalle> {
     console.log('id : ' , id)
-    return this.http.get<ReserveSalle>(`${this.url}/reservesalles/reservesalle/${id}`);
+    return this.http.get<ReserveSalle>(`${this.url}/reservesalles/edit-reserve-room/${id}`);
   }
 
 }
