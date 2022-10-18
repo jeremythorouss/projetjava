@@ -5,6 +5,7 @@ import io.takima.demo.models.User;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.PostUpdate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,8 +36,18 @@ public class UserController {
         userDAO.deleteById(id);
     }
 
-    @PostMapping("")
-    public void adduser(@RequestBody User user) {
+    @PostMapping("/add-user")
+    public void addUser(@RequestBody User user) {
         userDAO.save(user);
     }
+
+    /*@PostMapping("/edit-user/{id}")
+    public void editUser(@PathVariable User user, Long id) {
+        userDAO.save(user);
+    }*/
+    @GetMapping("/user/{id}")
+    public User getbyid(@PathVariable Long id) {
+        return userDAO.findById(id).get();
+    }
+
 }

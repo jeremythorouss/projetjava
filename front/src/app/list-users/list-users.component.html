@@ -9,19 +9,22 @@
       <th scope="col">Email</th>
       <th scope="col">Birthdate</th>
       <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    //*ngFor在模版中使用for循环
     <tr *ngFor="let user of users">
       <td>{{user.id}}</td>
-      <td>{{user.Name}}</td>
-      <td>{{user.Email}}</td>
-      <td>{{user.Birthdate}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.birthdate  | date: "dd/MM/yyyy"}}</td>
+      <!--<td>{{user.birthdate  | date: "yyyy-MM-dd"}}</td>-->
       <td><a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a></td>
+      <td><a class="btn btn-danger" (click)="editUser(user.id)">Edit</a></td>
     </tr>
     </tbody>
   </table>
+  <a class="btn btn-primary" (click)="addUser()" >ajouter des membres </a>
   <a class="btn btn-primary" (click)="showMe()"> T'es ou ?</a>
   <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
 </div>

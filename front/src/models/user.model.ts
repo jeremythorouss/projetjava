@@ -1,14 +1,23 @@
 //user.model.ts
 export class User {
-  id: bigint | null;
-  Name: string;
-  Email: string;
-  Birthdate: Date;
+  id: number | null;
+  name: string;
+  email: string;
+  birthdate: Date;
 
-  constructor(id: bigint | null, Name: string, Email: string, Birthdate: Date) {
+  constructor(id: number | null, name: string, email: string, birthdate: Date) {
     this.id = id;
-    this.Name = Name;
-    this.Email = Email;
-    this.Birthdate = Birthdate;
+    this.name = name;
+    this.email = email;
+    this.birthdate = birthdate;
   }
+
+  /*constructor(name: string, email: string, birthdate: Date){
+    for(let Users in user) :
+      this.name = name;
+      this.email = email;
+      this.birthdate = birthdate;
+  }*/
+
+
 }

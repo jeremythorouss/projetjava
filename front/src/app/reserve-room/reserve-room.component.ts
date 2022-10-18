@@ -1,50 +1,67 @@
-import { Component, OnInit } from '@angular/core';
-import {Room} from "../../models/room.model";
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {UserService} from "../services/user.service";
-import {User} from "../../models/user.model";
-//注解（在ES7中叫做装饰器，用来定义方法和类的信息）
-/*定义组件模板有两个方式：
-  1. 使用templateUrl引用一个html文件
-  2. 使用template + ES6的模版字符串``
-  同样2个方法-> 组件样式 styles
-  1. 数组：[``]
-*/
+import {ReserveSalle} from "../../models/reservesalle.model";
+import {ReserveSalleService} from "../services/reserve-salle.service"
+import {Router} from "@angular/router";
+import {NgForm} from '@angular/forms';
+
 @Component({
   selector: 'app-reserve-room', //当前组件的引用地址
   templateUrl: './reserve-room.component.html',//当前组件的模板
   styleUrls: ['./reserve-room.component.scss'] //组件的样式文件
 })
+
 export class ReserveRoomComponent implements OnInit {
   //组件名称
   estCeQuilEstLa= false;
-  room: Room = {
-    id: 1,
-    roomNo: 100,
-    type: 'Double',
-    users: [],
-    money: 80,
-    checkInDate: 6/15/22,
-    checkOutDate: 6/25/22,
-    status:0
-  };
 
+  // reservesalles :ReserveSalle[] = [];
+  //
+  // selectedSalle?: ReserveSalle;
 
-  constructor() {
+  @ViewChild('f') signupForm?: NgForm;
 
+  defaultChoice = 'date1';
+
+  constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
+    //this.reservesalles=[];
   }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    // this.getReserveSalle();
+    // this.addReserveSalle();
   }
+
+  onSubmit(ngForm: NgForm){
+    console.log(ngForm);
+    const reservesalle = new ReserveSalle(
+      null,
+      ngForm.form.value.startdate,
+      ngForm.form.value.endate,
+      ngForm.form.value.name,)
+    this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
+    setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
+
+    }
+
+
+  //retrieve the reservesalles from the service.
+  //subscribe() passes the emitted array to the callback,
+  // which sets the component's heroes property.
+  // getReserveSalle(): void {
+  //   this.reserveSalleService.getReserveSalle()
+  //       .subscribe((reservesalles )=> this.reservesalles = reservesalles);
+  // }
 
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
   }
 
-  deleteUser(id: bigint | null){
 
-  }
+  /*deleteSalle(id: bigint | null){
+    this.salleService.deleteSalle(id).subscribe(() => this.salles = this.salles.filter(salle => salle.id !== id));
+  }*/
+
 
 }

@@ -22,13 +22,14 @@ export class AddUserComponent implements OnInit {
     console.log(ngForm);
     const user = new User(
       null,
-      ngForm.form.value.firstName,
-      ngForm.form.value.lastName,
-      ngForm.form.value.age,
+      ngForm.form.value.name,
+      ngForm.form.value.email,
+      ngForm.form.value.birthdate,
     )
 
     this.userService.addUser(user).subscribe();
-    setTimeout(()=>this.router.navigateByUrl('/'), 1000)
+    setTimeout(()=>this.router.navigateByUrl('/list-users'), 1000)
+
   }
 
 
