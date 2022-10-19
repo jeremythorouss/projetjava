@@ -19,6 +19,7 @@ import { ListReserveRoomComponent } from './list-reserve-room/list-reserve-room.
 import {EditReserveRoomComponent} from "./edit-reserve-room/edit-reserve-room.component";
 
 
+
 @NgModule({
   declarations: [ //声明本模块中拥有的视图类: 组件、指令和管道
     AppComponent,

@@ -13,6 +13,7 @@ export class ListReserveRoomComponent implements OnInit {
 
   estCeQuilEstLa= false;
   reservesalles :ReserveSalle[] = [];
+  x: any;
 
   constructor(private http: HttpClient, private reserveSalleService: ReserveSalleService, private router:Router) {
     this.reservesalles=[];
@@ -40,5 +41,6 @@ export class ListReserveRoomComponent implements OnInit {
   editReserveSalle(id: number | null){
     this.router.navigateByUrl("edit-reservesalle/"+id)
   }
+
 
 }

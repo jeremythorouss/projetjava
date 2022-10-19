@@ -28,6 +28,12 @@ export class ReserveRoomComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*this.name = user.map((user[]) => {
+      return {
+        label: `${user.Name} `,
+        value: `${user.Name} `,
+      };
+    });*/
     // this.getReserveSalle();
     // this.addReserveSalle();
   }

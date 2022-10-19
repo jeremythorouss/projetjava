@@ -1,6 +1,7 @@
+<input type="text" id="myInput"  ng-keyup="filtre()" placeholder="Search for names..">
 <!-- Tableau Angular -->
 <div class="container d-flex flex-column align-items-center justify-content-center">
-  <table class="table table-dark table-striped table-group-divider">
+  <table class="table table-dark table-striped table-group-divider" id="TableUser">
     <thead>
     <tr>
       <th scope="col">ID</th>
@@ -28,3 +29,26 @@
   <a class="btn btn-primary" (click)="showMe()"> T'es ou ?</a>
   <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
 </div>
+
+<script>
+  function filtre() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("TableUser");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
