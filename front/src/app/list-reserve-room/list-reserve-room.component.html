@@ -15,8 +15,8 @@
     <tr *ngFor="let reservesalle of reservesalles">
       <td>{{reservesalle.id}}</td>
       <td>{{reservesalle.name}}</td>
-      <td>{{reservesalle.startdate| date: "dd/MM/yyyy"}}</td>
-      <td>{{reservesalle.endate  | date: "dd/MM/yyyy"}}</td>
+      <td>{{reservesalle.startdate| date: "dd/MM/yyyy hh:mm"}}</td>
+      <td>{{reservesalle.endate  | date: "dd/MM/yyyy hh:mm"}}</td>
       <td><a class="btn btn-danger" (click)="deleteReserveSalle(reservesalle.id)">Delete</a></td>
       <td><a class="btn btn-danger" (click)="editReserveSalle(reservesalle.id)">Edit</a></td>
     </tr>
