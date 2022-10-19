@@ -1,3 +1,4 @@
+/*
 npm install express body-parser cors nodemailer
 //import modules installed at the previous step. We need them to run Node.js server and send emails
 const express = require("express");
@@ -46,3 +47,4 @@ const mailOptions = {
   html: "<h1>And here is the place for HTML</h1>"
 };
 transporter.sendMail(mailOptions, callback);
+*/
