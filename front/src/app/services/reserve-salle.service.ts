@@ -36,7 +36,7 @@ export class ReserveSalleService {
   }
   getReserveSalleById( id: number | null): Observable<ReserveSalle> {
     console.log('id : ' , id)
-    return this.http.get<ReserveSalle>(`${this.url}/reservesalles/edit-reserve-room/${id}`);
+    return this.http.get<ReserveSalle>(`${this.url}/reservesalles/reservesalle/${id}`);
   }
 
 }

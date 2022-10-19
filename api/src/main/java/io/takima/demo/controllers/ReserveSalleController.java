@@ -39,7 +39,7 @@ public class ReserveSalleController {
         ReserveSalleDAO.save(reservesalle);
     }
 
-    @GetMapping("/reserve-room/{id}")
+    @GetMapping("/reservesalle/{id}")
     public ReserveSalle getbyid(@PathVariable Long id) {
         return ReserveSalleDAO.findById(id).get();
     }

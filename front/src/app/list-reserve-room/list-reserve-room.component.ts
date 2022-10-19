@@ -38,7 +38,7 @@ export class ListReserveRoomComponent implements OnInit {
       () => this.reservesalles = this.reservesalles.filter(reservesalle => reservesalle.id !== id));
   }
   editReserveSalle(id: number | null){
-    this.router.navigateByUrl("edit-reserve-room/"+id)
+    this.router.navigateByUrl("edit-reservesalle/"+id)
   }
 
 }
