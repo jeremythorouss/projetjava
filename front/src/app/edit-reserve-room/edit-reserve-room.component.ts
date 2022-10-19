@@ -82,9 +82,10 @@ onSubmit(ngForm: NgForm) {
     console.log(ngForm);
     const reservesalle = new ReserveSalle(
       this.id,
+      ngForm.form.value.namesalle,
       ngForm.form.value.name,
       ngForm.form.value.startdate,
-      ngForm.form.value.endate
+      ngForm.form.value.endate,
   )
 
     this.reservesalleService.addReserveSalle(reservesalle).subscribe();

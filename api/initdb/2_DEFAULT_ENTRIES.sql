@@ -12,4 +12,4 @@ INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (10, 'Sacha', 'T
 
 INSERT INTO defaultdb.salles (id, name, photo,  capacite , equipement) VALUES (1,'salle',null,10,'projecteur');
 
-INSERT INTO defaultdb.reservesalles (id, startdate, endate, name) VALUES (1,'2022-05-14','2022-06-15', 'MollyXXXX');
+INSERT INTO defaultdb.reservesalles (id, startdate, endate, name, namesalle) VALUES (1,'2022-05-14','2022-06-15', 'MollyXXXX', 'salletest');

@@ -38,7 +38,8 @@ export class ReserveRoomComponent implements OnInit {
       null,
       ngForm.form.value.startdate,
       ngForm.form.value.endate,
-      ngForm.form.value.name,)
+      ngForm.form.value.name,
+      ngForm.form.value.namesalle)
     this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
     setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
 
