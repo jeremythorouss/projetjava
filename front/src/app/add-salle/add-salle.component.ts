@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {FormControl, NgForm} from "@angular/forms";
 import {User} from "../../models/user.model";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
@@ -15,7 +15,6 @@ export class AddSalleComponent implements OnInit {
 
   constructor(private httpClient: HttpClient, private router: Router, private salleService: SalleService) {
   }
-
   ngOnInit() {
   }
 

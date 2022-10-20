@@ -4,7 +4,7 @@ export class Salle {
   name: string;
   photo: string | null;
   capacite: bigint
-  equipement:string
+  equipement:string;
 
 
   constructor(id: number | null, name: string, photo: string, capacite: bigint, equipement:string) {
