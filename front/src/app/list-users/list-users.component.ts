@@ -13,6 +13,7 @@ export class ListUsersComponent implements OnInit {
 
   estCeQuilEstLa= false;
   users: User[];
+  filterText: string = '';
 
   constructor(private http: HttpClient, private userService: UserService, private router:Router) {
     this.users=[];

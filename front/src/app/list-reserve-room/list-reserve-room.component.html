@@ -25,7 +25,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let reservesalle of reservesalles | filter:filterText">
+    <tr *ngFor="let reservesalle of reservesalles ">
       <td>{{reservesalle.id}}</td>
       <td>{{reservesalle.name}}</td>
       <td>{{reservesalle.namesalle | lowercase}}</td>

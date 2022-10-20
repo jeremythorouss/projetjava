@@ -1,18 +1,19 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {ReserveSalle} from "../models/reservesalle.model";
+import {User} from "../models/user.model";
 
 @Pipe({
-  name: 'filter'
+  name: 'filterUser'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(reservesalles: ReserveSalle[],filterText:string) {
-    if(reservesalles.length === 0 || filterText === ''){
-      return reservesalles;
+  transform(users: User[],filterText:string) {
+    if(users.length === 0 || filterText === ''){
+      return users;
     }else {
-      return reservesalles.filter((reservesalle)=>
+      return users.filter((user)=>
       {
-        return reservesalle.namesalle.toLowerCase() === filterText.toLowerCase();
+        return user.name.toLowerCase() === filterText.toLowerCase();
       })
     }
 

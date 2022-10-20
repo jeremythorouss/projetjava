@@ -13,7 +13,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users | filterUser:filterText" >
       <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
@@ -24,6 +24,17 @@
     </tr>
     </tbody>
   </table>
+  <div>
+    <input
+      type="text"
+      id="filter"
+      placeholder="Search for room-names.."
+      style="color: blueviolet;
+       padding: 2px 20px;
+       margin: 40px; "
+      [(ngModel)]="filterText"
+    >
+  </div>
   <a class="btn btn-primary" (click)="addUser()" >ajouter des membres </a>
   <a class="btn btn-primary" (click)="showMe()"> T'es ou ?</a>
   <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
