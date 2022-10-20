@@ -24,9 +24,6 @@ export class ListSalleComponent implements OnInit {
     })
   }
 
-  showMe() {
-    this.estCeQuilEstLa=!this.estCeQuilEstLa;
-  }
 
   deleteSalle(id: number | null){
     this.salleService.deleteSalle(id).subscribe(() => this.salles = this.salles.filter(salle => salle.id !== id));
