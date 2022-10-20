@@ -13,7 +13,8 @@ export class ListReserveRoomComponent implements OnInit {
 
   estCeQuilEstLa= false;
   reservesalles :ReserveSalle[] = [];
-  x: any;
+  //x: any;
+  filterText: string = '';
 
   constructor(private http: HttpClient, private reserveSalleService: ReserveSalleService, private router:Router) {
     this.reservesalles=[];

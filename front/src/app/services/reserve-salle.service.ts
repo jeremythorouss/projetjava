@@ -3,7 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpResponse} from "@angular/common/http"
 import {environment} from "../../environments/environment";
 import { Observable} from 'rxjs';
 import {ReserveSalle} from "../../models/reservesalle.model";
-import {Salle} from "../../models/salle.model";
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +26,6 @@ export class ReserveSalleService {
 
   }
 
-  // getReserveSalle():  Observable<ReserveSalle[]> {
-  //   const reservesalles = of(RESERVESALLES);
-  //   this.messageService.add('ReserveSalleService: fetched reservesalle');
-  //   return reservesalles;
-  // }
   deleteReserveSalle(id: number | null): Observable<any> {
     return this.http.delete(`${this.url}/reservesalles/${id}`);
   }

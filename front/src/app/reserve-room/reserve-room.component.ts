@@ -21,7 +21,7 @@ export class ReserveRoomComponent implements OnInit {
 
   @ViewChild('f') signupForm?: NgForm;
 
-  defaultChoice = 'date1';
+  //defaultChoice = 'date1';
 
   constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
     //this.reservesalles=[];
