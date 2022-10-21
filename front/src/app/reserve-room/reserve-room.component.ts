@@ -21,19 +21,17 @@ export class ReserveRoomComponent implements OnInit {
 
   @ViewChild('f') signupForm?: NgForm;
 
-  //defaultChoice = 'date1';
-
   constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
     //this.reservesalles=[];
   }
 
   ngOnInit() {
-    /*this.name = user.map((user[]) => {
-      return {
-        label: `${user.Name} `,
-        value: `${user.Name} `,
-      };
-    });*/
+    // this.name = userid.map((userid[]) => {
+    //   return {
+    //     label: `${userid.Name} `,
+    //     value: `${userid.Name} `,
+    //   };
+    // });
     // this.getReserveSalle();
     // this.addReserveSalle();
   }

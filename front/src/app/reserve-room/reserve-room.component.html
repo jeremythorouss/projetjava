@@ -44,19 +44,20 @@
       <div id="reserve-room">
           <div class="form-group">
             <label for="reserve-room">Select StartDate</label>
-            <input type="datetime-local" id="startdate" class="form-control" name="startdate" ngModel>
-<!--            <select-->
-<!--              id="startdate"-->
-<!--              class="form-control"-->
-<!--              type="select"-->
-<!--              [ngModel] = "defaultChoice"-->
-<!--              name="startdate">-->
-<!--              <option type="date" value="date1">startdate: 1 </option>-->
-<!--              <option value="date1">startdate: 2 </option>-->
-<!--              <option value="date1">startdate: 3 </option>-->
-<!--             </select>-->
+            <input
+              type="date"
+              id="startdate"
+              class="form-control"
+              name="startdate"
+              ngModel>
+
             <label for="reserve-room">Select EndDate</label>
-            <input type="datetime-local" id="endate" class="form-control" name="endate" ngModel>
+            <input
+              type="date"
+              id="endate"
+              class="form-control"
+              name="endate"
+              ngModel>
 <!--            <select-->
 <!--              id="endate"-->
 <!--              class="form-control"-->
@@ -70,16 +71,6 @@
           </div>
 
         <label for="reserve-room">Select Room</label>
-<!--        <select-->
-<!--          id="room"-->
-<!--          class="form-control"-->
-<!--          type="select"-->
-<!--          [ngModel] = "defaultChoice"-->
-<!--          name="room">-->
-<!--          <option value="room1">room: 1 </option>-->
-<!--          <option value="room2">room: 2 </option>-->
-<!--          <option value="room3">room: 3 </option>-->
-<!--        </select>-->
         <div class="form-group">
 <!--          <textarea-->
 <!--            name="comment"-->
@@ -90,22 +81,6 @@
 <!--          <p>Your comments: {{comment}}</p>-->
         </div>
       </div>
-
-<!--          <div class="form-group">-->
-<!--            <select id="name" class="form-control" type="select" ngModel name="name" >-->
-<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
-<!--            </select>-->
-<!--          </div>-->
-<!--          <div class="form-group">-->
-<!--            <select id="startdate" class="form-control" type="select" ngModel name="startdate">-->
-<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
-<!--            </select>-->
-<!--          </div>-->
-<!--          <div class="form-group">-->
-<!--            <select id="endate" class="form-control" type="select" type="select" ngModel name="endate">-->
-<!--              <option *ngFor="let reservesalle of reservesalles" value="{{reservesalle.id}}">{{reservesalle.name}}</option>-->
-<!--            </select>-->
-<!--          </div>-->
         <button class="btn btn-primary" type="submit" >Submit </button>
       </form>
     </div>
