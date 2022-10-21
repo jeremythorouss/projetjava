@@ -18,14 +18,15 @@
 <!--  <mat-form-field>-->
 <!--    <input matInput type="datetime-local" placeholder="start date">-->
 <!--  </mat-form-field>-->
-  <table class="table table-dark table-striped table-group-divider" id="TableUser">
+  <table class="table table-dark table-striped table-group-divider" id="TableUser" >
     <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Name salle</th>
       <th scope="col">startDate</th>
-      <th scope="col">enDate</th>
+      <th scope="col">endDate</th>
+      <th scope="col" matColumnDef="time">Time</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
@@ -35,8 +36,9 @@
       <td>{{reservesalle.id}}</td>
       <td>{{reservesalle.name}}</td>
       <td>{{reservesalle.namesalle }}</td>
-      <td>{{reservesalle.startdate| date: 'medium'}}</td>
-      <td>{{reservesalle.endate  | date: 'medium'}}</td>
+      <td>{{reservesalle.startdate| date: 'yyyy-MM-ddTHH:mm:ss'}}</td>
+      <td>{{reservesalle.endate  | date: 'yyyy-MM-ddTHH:mm:ss'}}</td>
+      <td>{{reservesalle.time}}</td>
       <td><a class="btn btn-danger" (click)="deleteReserveSalle(reservesalle.id)">Delete</a></td>
       <td><a class="btn btn-danger" (click)="editReserveSalle(reservesalle.id)">Edit</a></td>
     </tr>

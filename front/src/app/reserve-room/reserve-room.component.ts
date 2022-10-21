@@ -15,6 +15,9 @@ export class ReserveRoomComponent implements OnInit {
   //组件名称
   estCeQuilEstLa= false;
 
+  public format = 'hh:mm tt';
+  public newdate: Date = new Date();
+
   // reservesalles :ReserveSalle[] = [];
   //
   // selectedSalle?: ReserveSalle;
@@ -32,8 +35,6 @@ export class ReserveRoomComponent implements OnInit {
     //     value: `${userid.Name} `,
     //   };
     // });
-    // this.getReserveSalle();
-    // this.addReserveSalle();
   }
 
   onSubmit(ngForm: NgForm){
@@ -43,30 +44,18 @@ export class ReserveRoomComponent implements OnInit {
       ngForm.form.value.startdate,
       ngForm.form.value.endate,
       ngForm.form.value.name,
-      ngForm.form.value.namesalle)
+      ngForm.form.value.namesalle,
+      ngForm.form.value.time,)
     this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
     setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
 
     }
 
 
-  //retrieve the reservesalles from the service.
-  //subscribe() passes the emitted array to the callback,
-  // which sets the component's heroes property.
-  // getReserveSalle(): void {
-  //   this.reserveSalleService.getReserveSalle()
-  //       .subscribe((reservesalles )=> this.reservesalles = reservesalles);
-  // }
-
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
   }
-
-
-  /*deleteSalle(id: bigint | null){
-    this.salleService.deleteSalle(id).subscribe(() => this.salles = this.salles.filter(salle => salle.id !== id));
-  }*/
 
 
 }

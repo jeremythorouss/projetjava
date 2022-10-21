@@ -86,6 +86,7 @@ onSubmit(ngForm: NgForm) {
       ngForm.form.value.name,
       ngForm.form.value.startdate,
       ngForm.form.value.endate,
+      ngForm.form.value.time,
   )
 
     this.reservesalleService.addReserveSalle(reservesalle).subscribe();
