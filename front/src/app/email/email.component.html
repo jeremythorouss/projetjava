@@ -1,0 +1,20 @@
+<!-- formulaire add-user -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="form-group">
+          <table>
+            <tr>
+              <td><span>Send Email to</span></td>
+              <td><input type="text" [(ngModel)]="dataset.email" name="email">
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button (click)="onSubmit()">Submit</button></td>
+            </tr>
+          </table>
+    </div>
+  </div>
+</div>
+

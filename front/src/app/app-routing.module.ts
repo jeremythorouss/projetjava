@@ -8,6 +8,7 @@ import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import {EditSalleComponent} from "./edit-salle/edit-salle.component";
+import {EmailComponent} from "./email/email.component";
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:'add-salle', component: AddSalleComponent},
   //{path:'edit-user',component: EditUserComponent},
   { path: 'edit-user/:id', component: EditUserComponent },
-  { path: 'edit-salle/:id', component: EditSalleComponent }
+  { path: 'edit-salle/:id', component: EditSalleComponent },
+  { path: 'email', component: EmailComponent },
 ];
 
 

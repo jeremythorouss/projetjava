@@ -13,6 +13,7 @@ import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import {EditSalleComponent} from "./edit-salle/edit-salle.component";
+import {EmailComponent} from "./email/email.component";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {EditSalleComponent} from "./edit-salle/edit-salle.component";
     AddSalleComponent,
     ListSalleComponent,
     EditUserComponent,
-    EditSalleComponent
+    EditSalleComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
