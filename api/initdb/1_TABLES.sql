@@ -28,6 +28,7 @@ create table reservesalles
         primary key (id),
     startdate datetime null,
     endate datetime null,
+    time datetime null,
     name varchar(255) not null,
     namesalle varchar(255) not null
 );

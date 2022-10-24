@@ -44,33 +44,23 @@
           <div class="form-group">
             <label for="reserve-room">Select StartDate</label>
             <input
-              type="date"
+              type="datetime-local"
+              value="2010-11-25T14:57:00"
               id="startdate"
               class="form-control"
               name="startdate"
-              ngModel>
+              ng-model="string">
 
             <label for="reserve-room">Select EndDate</label>
             <input
-              type="date"
+              type="datetime-local"
+              value="2010-12-28T14:57:00"
               id="endate"
               class="form-control"
               name="endate"
               placeholder="yyyy-MM-ddTHH:mm:ss"
-              ngModel>
+              ng-model="string">
 
-            <label for="reserve-room">Select Time</label>
-            <igx-time-picker
-              [(ngModel)]="newdate"
-              mode="dialog"
-              [minValue]="'16:00:00'"
-              [inputFormat]="format">
-              <label igxLabel>Time</label>
-              <igx-picker-toggle igxSuffix>
-                <igx-icon>home</igx-icon>
-              </igx-picker-toggle>
-              <igx-hint>{{newdate.toLocaleString()}}</igx-hint>
-            </igx-time-picker>
 
 
           </div>

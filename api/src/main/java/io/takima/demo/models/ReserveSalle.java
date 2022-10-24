@@ -16,6 +16,7 @@ public class ReserveSalle {
                 ", endate=" + endate +
                 ", name='" + name + '\'' +
                 ", namesalle='" + namesalle + '\'' +
+                ", time='" + time + '\'' +
                 '}';
     }
 
@@ -28,12 +29,18 @@ public class ReserveSalle {
         if (this == o) return true;
         if (!(o instanceof ReserveSalle)) return false;
         ReserveSalle that = (ReserveSalle) o;
-        return Objects.equals(id, that.id) && Objects.equals(startdate, that.startdate) && Objects.equals(endate, that.endate) && Objects.equals(name, that.name) && Objects.equals(namesalle, that.namesalle);
+        return Objects.equals(id, that.id)
+                && Objects.equals(startdate, that.startdate)
+                && Objects.equals(endate, that.endate)
+                && Objects.equals(name, that.name)
+                && Objects.equals(namesalle, that.namesalle)
+                && Objects.equals(time, that.time)
+                ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, startdate, endate, name, namesalle);
+        return Objects.hash(id, startdate, endate, name, namesalle,time);
     }
 
     @Column(name = "startdate")
@@ -44,6 +51,17 @@ public class ReserveSalle {
     private String name;
     @Column(name = "namesalle")
     private String namesalle;
+
+    @Column(name = "time")
+    private Date time;
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 
     public String getNamesalle() {
         return namesalle;
@@ -57,12 +75,13 @@ public class ReserveSalle {
     public ReserveSalle() {
     }
 
-    public ReserveSalle(Long id, Date startdate, Date endate, String name, String namesalle) {
+    public ReserveSalle(Long id, Date startdate, Date endate, String name, String namesalle, Date time) {
         this.id = id;
         this.startdate = startdate;
         this.endate = endate;
         this.name = name;
         this.namesalle=namesalle;
+        this.time = time;
     }
 
     public Long getId() {

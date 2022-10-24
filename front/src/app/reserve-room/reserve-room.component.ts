@@ -15,9 +15,6 @@ export class ReserveRoomComponent implements OnInit {
   //组件名称
   estCeQuilEstLa= false;
 
-  public format = 'hh:mm tt';
-  public newdate: Date = new Date();
-
   // reservesalles :ReserveSalle[] = [];
   //
   // selectedSalle?: ReserveSalle;
