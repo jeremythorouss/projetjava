@@ -1,0 +1,17 @@
+
+.btn {
+  color: black;
+  background-color: darksalmon;
+  border: 2px solid blueviolet;
+  padding: 15px 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  cursor: pointer; /* 指针/手形图标 */
+  float: left; /* 并排浮动按钮 */
+  transition: all 0.5s;
+}
+.btn:hover {
+  color: white;
+  background-color: aquamarine;
+  border: 2px solid blueviolet;
+}

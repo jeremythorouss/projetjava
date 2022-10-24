@@ -1,13 +1,28 @@
 
 <!-- Tableau Angular -->
 <div class="container d-flex flex-column align-items-center justify-content-center">
+  <div class="row">
   <a class="btn btn-primary" onclick="location.href='http://localhost:4200/list-users';" >gestion des membres </a>
-  <a class="btn btn-primary" onclick="location.href='http://localhost:4200/list-salles';">gestion des salles</a>
+  </div>
+  <br>
+  <div class="row">
+    <a class="btn btn-primary" onclick="location.href='http://localhost:4200/list-salles';">gestion des salles</a>
+  </div>
+  <br>
+  <div class="row">
   <a class="btn btn-primary" onclick="location.href='http://localhost:4200/reserve-room';">Réserver une salle</a>
+  </div>
+  <br>
+  <div class="row">
   <a class="btn btn-primary" onclick="location.href='http://localhost:4200/list-reserve-room';">Voir quelle salle est libre </a>
-  <a class="btn btn-primary" >inviter membre salle réunion </a>
+  </div>
+  <br>
+  <div class="row">
+  <a class="btn btn-primary" onclick="location.href='http://localhost:4200/list-users';">inviter membre salle réunion </a>
+  </div>
+  <br>
   <a class="btn btn-primary" >envoyer des mails </a>
-
+  <br>
   <a class="btn btn-primary" (click)="showMe()"> t'es ou</a>
   <p *ngIf="estCeQuilEstLa">Je suis là !!</p>
   <hr>

@@ -48,7 +48,7 @@ export class ListReserveRoomComponent implements OnInit {
 
   deleteReserveSalle(id: number | null){
     this.reserveSalleService.deleteReserveSalle(id).subscribe(
-      () => this.reservesalles = this.reservesalles.filter(reservesalle => reservesalle.id !== id));
+      () => this.reservesalles = this.filterReserveSalleByName(this._filterText));
   }
   editReserveSalle(id: number | null){
     this.router.navigateByUrl("edit-reservesalle/"+id)

@@ -16,7 +16,6 @@ public class ReserveSalle {
                 ", endate=" + endate +
                 ", name='" + name + '\'' +
                 ", namesalle='" + namesalle + '\'' +
-                ", time='" + time + '\'' +
                 '}';
     }
 
@@ -34,13 +33,12 @@ public class ReserveSalle {
                 && Objects.equals(endate, that.endate)
                 && Objects.equals(name, that.name)
                 && Objects.equals(namesalle, that.namesalle)
-                && Objects.equals(time, that.time)
                 ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, startdate, endate, name, namesalle,time);
+        return Objects.hash(id, startdate, endate, name, namesalle);
     }
 
     @Column(name = "startdate")
@@ -52,16 +50,6 @@ public class ReserveSalle {
     @Column(name = "namesalle")
     private String namesalle;
 
-    @Column(name = "time")
-    private Date time;
-
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
 
     public String getNamesalle() {
         return namesalle;
@@ -75,13 +63,12 @@ public class ReserveSalle {
     public ReserveSalle() {
     }
 
-    public ReserveSalle(Long id, Date startdate, Date endate, String name, String namesalle, Date time) {
+    public ReserveSalle(Long id, Date startdate, Date endate, String name, String namesalle) {
         this.id = id;
         this.startdate = startdate;
         this.endate = endate;
         this.name = name;
         this.namesalle=namesalle;
-        this.time = time;
     }
 
     public Long getId() {
