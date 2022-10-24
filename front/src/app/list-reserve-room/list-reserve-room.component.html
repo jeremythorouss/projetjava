@@ -12,12 +12,9 @@
       style="color: blueviolet;
        padding: 2px 20px;
        margin: 40px; "
-      [(ngModel)]="filterText"
     >
   </div>
-<!--  <mat-form-field>-->
-<!--    <input matInput type="datetime-local" placeholder="start date">-->
-<!--  </mat-form-field>-->
+
   <table class="table table-dark table-striped table-group-divider" id="TableUser" >
     <thead>
     <tr>
@@ -26,19 +23,17 @@
       <th scope="col">Name salle</th>
       <th scope="col">startDate</th>
       <th scope="col">endDate</th>
-      <th scope="col">Time</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let reservesalle of filteredReserveSalles ">
+    <tr *ngFor="let reservesalle of reservesalles">
       <td>{{reservesalle.id}}</td>
       <td>{{reservesalle.name}}</td>
       <td>{{reservesalle.namesalle }}</td>
-      <td>{{reservesalle.startdate| date: 'yyyy-MM-ddTHH:mm:ss'}}</td>
-      <td>{{reservesalle.endate  | date: 'yyyy-MM-ddTHH:mm:ss'}}</td>
-      <td></td>
+      <td>{{reservesalle.startdate| date:  "dd/MM/yyyy hh:mm"}}</td>
+      <td>{{reservesalle.endate  | date:  "dd/MM/yyyy hh:mm"}}</td>
       <td><a class="btn btn-danger" (click)="deleteReserveSalle(reservesalle.id)">Delete</a></td>
       <td><a class="btn btn-danger" (click)="editReserveSalle(reservesalle.id)">Edit</a></td>
     </tr>

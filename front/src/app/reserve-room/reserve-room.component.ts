@@ -15,8 +15,6 @@ export class ReserveRoomComponent implements OnInit {
   //组件名称
   estCeQuilEstLa= false;
 
-  // reservesalles :ReserveSalle[] = [];
-  //
   // selectedSalle?: ReserveSalle;
 
   @ViewChild('f') signupForm?: NgForm;
