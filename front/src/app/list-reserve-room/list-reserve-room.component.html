@@ -11,8 +11,9 @@
       placeholder="Search for room-names.."
       style="color: blueviolet;
        padding: 2px 20px;
-       margin: 40px; "
-    >
+       margin: 40px 0px;
+       height: 30px;"
+       [(ngModel)]="filterText">
   </div>
 
   <table class="table table-dark table-striped table-group-divider" id="TableUser" >
@@ -28,7 +29,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let reservesalle of reservesalles">
+    <tr *ngFor="let reservesalle of filteredReserveSalles">
       <td>{{reservesalle.id}}</td>
       <td>{{reservesalle.name}}</td>
       <td>{{reservesalle.namesalle }}</td>

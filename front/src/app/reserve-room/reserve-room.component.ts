@@ -17,7 +17,7 @@ export class ReserveRoomComponent implements OnInit {
 
   // selectedSalle?: ReserveSalle;
 
-  @ViewChild('f') signupForm?: NgForm;
+  //@ViewChild('f') signupForm?: NgForm;
 
   constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
     //this.reservesalles=[];
@@ -44,8 +44,6 @@ export class ReserveRoomComponent implements OnInit {
     setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
 
     }
-
-
 
   showMe() {
     this.estCeQuilEstLa=!this.estCeQuilEstLa;
