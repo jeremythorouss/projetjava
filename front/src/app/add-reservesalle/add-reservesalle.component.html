@@ -4,7 +4,6 @@
     <div class="col-xs=12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
     <h2>My ReserveSalle</h2>
     <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
-      <div id="user-info">
 <!--      <div id="reserve-room" *ngFor="let reservesalle of reservesalles">-->
         <div class="form-group">
           <label for="name">Name</label>
@@ -39,7 +38,6 @@
             required
             ngModel>
         </div>
-      </div>
       <div id="reserve-room">
           <div class="form-group">
             <label for="reserve-room">Select StartDate</label>

@@ -36,10 +36,10 @@ export class AddReservesalleComponent implements OnInit {
     console.log(ngForm);
     const reservesalle = new ReserveSalle(
       null,
-      ngForm.form.value.startdate,
-      ngForm.form.value.endate,
       ngForm.form.value.name,
-      ngForm.form.value.namesalle,)
+      ngForm.form.value.namesalle,
+      ngForm.form.value.startdate,
+      ngForm.form.value.endate,)
     this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
     setTimeout(()=>this.router.navigateByUrl('/list-reservesalle'), 1000)
 

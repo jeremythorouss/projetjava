@@ -15,15 +15,15 @@ import java.util.List;
 
 @RestController
 public class ReserveSalleController {
-    private final ReserveSalleDAO ReserveSalleDAO;
+    private final ReserveSalleDAO reservesalleDAO;
 
-    public ReserveSalleController(ReserveSalleDAO ReserveSalleDAO) {
-        this.ReserveSalleDAO = ReserveSalleDAO;
+    public ReserveSalleController(ReserveSalleDAO reservesalleDAO) {
+        this.reservesalleDAO = reservesalleDAO;
     }
 
     @GetMapping("/list-reservesalle")
     public List<ReserveSalle> listReserveSalles() {
-        Iterable<ReserveSalle> it = ReserveSalleDAO.findAll();
+        Iterable<ReserveSalle> it = reservesalleDAO.findAll();
         List <ReserveSalle> reservesalles = new ArrayList<>();
         it.forEach(reservesalle -> reservesalles.add(reservesalle));
         return reservesalles ;
@@ -31,17 +31,17 @@ public class ReserveSalleController {
 
     @DeleteMapping("/{id}") //// need change deleteUser func
     public void deleteReserveSalle(@PathVariable Long id) {
-        ReserveSalleDAO.deleteById(id);
+        reservesalleDAO.deleteById(id);
     }
 
     @PostMapping("/add-reservesalle") //// need change add User func
     public void addReserveSalle(@RequestBody ReserveSalle reservesalle) {
-        ReserveSalleDAO.save(reservesalle);
+        reservesalleDAO.save(reservesalle);
     }
 
     @GetMapping("/reservesalle/{id}")
     public ReserveSalle getbyid(@PathVariable Long id) {
-        return ReserveSalleDAO.findById(id).get();
+        return reservesalleDAO.findById(id).get();
     }
 
 
