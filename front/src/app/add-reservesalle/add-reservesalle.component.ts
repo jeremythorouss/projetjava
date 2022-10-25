@@ -1,17 +1,17 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ReserveSalle} from "../../models/reservesalle.model";
-import {ReserveSalleService} from "../services/reserve-salle.service"
+import {ReservesalleService} from "../services/reservesalle.service"
 import {Router} from "@angular/router";
 import {NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'app-reserve-room', //当前组件的引用地址
-  templateUrl: './reserve-room.component.html',//当前组件的模板
-  styleUrls: ['./reserve-room.component.scss'] //组件的样式文件
+  selector: 'app-add-reservesalle', //当前组件的引用地址
+  templateUrl: './add-reservesalle.component.html',//当前组件的模板
+  styleUrls: ['./add-reservesalle.component.scss'] //组件的样式文件
 })
 
-export class ReserveRoomComponent implements OnInit {
+export class AddReservesalleComponent implements OnInit {
   //组件名称
   estCeQuilEstLa= false;
 
@@ -19,7 +19,7 @@ export class ReserveRoomComponent implements OnInit {
 
   //@ViewChild('f') signupForm?: NgForm;
 
-  constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReserveSalleService) {
+  constructor(private httpClient: HttpClient,private router: Router, private reserveSalleService: ReservesalleService) {
     //this.reservesalles=[];
   }
 
@@ -41,7 +41,7 @@ export class ReserveRoomComponent implements OnInit {
       ngForm.form.value.name,
       ngForm.form.value.namesalle,)
     this.reserveSalleService.addReserveSalle(reservesalle).subscribe();
-    setTimeout(()=>this.router.navigateByUrl('/list-reserve-room'), 1000)
+    setTimeout(()=>this.router.navigateByUrl('/list-reservesalle'), 1000)
 
     }
 

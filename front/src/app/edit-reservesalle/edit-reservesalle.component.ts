@@ -13,15 +13,15 @@ import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 
 import {ReserveSalle} from "../../models/reservesalle.model";
-import {ReserveSalleService} from "../services/reserve-salle.service";
+import {ReservesalleService} from "../services/reservesalle.service";
 
 
 @Component({
-  selector: 'app-edit-user',
-  templateUrl: './edit-reserve-room.component.html',
-  styleUrls: ['./edit-reserve-room.component.scss']
+  selector: 'app-edit-reservesalle',
+  templateUrl: './edit-reservesalle.component.html',
+  styleUrls: ['./edit-reservesalle.component.scss']
 })
-export class EditReserveRoomComponent implements OnInit {
+export class EditReservesalleComponent implements OnInit {
   /*constructor(private httpClient: HttpClient, private router: Router, private userService: SalleService) {
 }
 
@@ -47,7 +47,7 @@ onSubmit(ngForm: NgForm) {
   reservesalles: ReserveSalle[]
 
 
-  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private reservesalleService: ReserveSalleService, private router: Router) {
+  constructor(private httpClient: HttpClient, private activatedrouter: ActivatedRoute, private reservesalleService: ReservesalleService, private router: Router) {
     this.id = 0
     this.reservesalles=[]
   }
@@ -65,7 +65,7 @@ onSubmit(ngForm: NgForm) {
 
       this.reservesalleService.getReserveSalleById(this.id).subscribe(reservesalleResponse => {
         this.reservesalle = reservesalleResponse;
-        console.log("salle")
+        console.log("reservesalle")
         console.log(this.reservesalle)
         //this.user.birthdate=this.user.birthdate.getDate()
 
@@ -89,7 +89,7 @@ onSubmit(ngForm: NgForm) {
   )
 
     this.reservesalleService.addReserveSalle(reservesalle).subscribe();
-    setTimeout(() => this.router.navigateByUrl('/list-reserve-room'), 1000)
+    setTimeout(() => this.router.navigateByUrl('/list-reservesalle'), 1000)
 
   }
 

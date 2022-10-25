@@ -24,14 +24,14 @@
           <label for="startdate">
             startdate
           </label>
-          <input type="date" id="startdate" class="form-control" name="startdate"  [ngModel]="reservesalle?.startdate">
+          <input type="datetime-local" id="startdate" class="form-control" name="startdate"  [ngModel]="reservesalle?.startdate">
         </div>
 
         <div class="form-group">
           <label for="endate">
             endate
           </label>
-          <input type="date" id="endate" class="form-control" name="endate"  [ngModel]="reservesalle?.endate">
+          <input type="datetime-local" id="endate" class="form-control" name="endate"  [ngModel]="reservesalle?.endate">
         </div>
 
         <button class="btn btn-primary" type="submit">Ajouter</button>

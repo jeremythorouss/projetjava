@@ -8,9 +8,9 @@ import {ListSalleComponent} from "./list-salle/list-salle.component";
 import {AddSalleComponent} from "./add-salle/add-salle.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import {EditSalleComponent} from "./edit-salle/edit-salle.component";
-import {ReserveRoomComponent} from "./reserve-room/reserve-room.component";
-import {ListReserveRoomComponent} from "./list-reserve-room/list-reserve-room.component";
-import {EditReserveRoomComponent} from "./edit-reserve-room/edit-reserve-room.component";
+import {AddReservesalleComponent} from "./add-reservesalle/add-reservesalle.component";
+import {ListReservesalleComponent} from "./list-reservesalle/list-reservesalle.component";
+import {EditReservesalleComponent} from "./edit-reservesalle/edit-reservesalle.component";
 
 const routes: Routes = [
   {path:'admin', component: AdminComponent},
@@ -19,13 +19,13 @@ const routes: Routes = [
   {path:'add-user', component: AddUserComponent},
   {path:'list-salles', component: ListSalleComponent},
   {path:'add-salle', component: AddSalleComponent},
-  {path:'reserve-room', component: ReserveRoomComponent},
-  {path:'list-reserve-room', component:ListReserveRoomComponent},
+  {path:'add-reservesalle', component: AddReservesalleComponent},
+  {path:'list-reservesalle', component:ListReservesalleComponent},
 
   //{path:'edit-user',component: EditUserComponent},
   { path: 'edit-user/:id', component: EditUserComponent },
   { path: 'edit-salle/:id', component: EditSalleComponent },
-  { path: 'edit-reservesalle/:id', component: EditReserveRoomComponent }
+  { path: 'edit-reservesalle/:id', component: EditReservesalleComponent }
 ];
 
 @NgModule({

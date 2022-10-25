@@ -9,7 +9,7 @@ import {ReserveSalle} from "../../models/reservesalle.model";
   providedIn: 'root'
 })
 
-export class ReserveSalleService {
+export class ReservesalleService {
   private url: string;
 
   constructor(private http: HttpClient) {
@@ -17,12 +17,12 @@ export class ReserveSalleService {
   }
 
   getReserveSalle(): Observable<ReserveSalle[]> {
-    return this.http.get<ReserveSalle[]>(`${this.url}/reservesalles/list-reserve-room`);
+    return this.http.get<ReserveSalle[]>(`${this.url}/reservesalles/list-reservesalle`);
   }
 
   addReserveSalle(reservesalle: ReserveSalle): Observable<ReserveSalle> {
     console.log(reservesalle);
-    return this.http.post<any>(`${this.url}/reservesalles/reserve-room`, reservesalle)
+    return this.http.post<any>(`${this.url}/reservesalles/add-reservesalle`, reservesalle)
 
   }
 

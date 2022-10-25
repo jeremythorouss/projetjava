@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {ReserveSalle} from "../../models/reservesalle.model";
-import {ReserveSalleService} from "../services/reserve-salle.service"
+import {ReservesalleService} from "../services/reservesalle.service"
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-list-reserve-room',
-  templateUrl: './list-reserve-room.component.html',
-  styleUrls: ['./list-reserve-room.component.scss']
+  templateUrl: './list-reservesalle.component.html',
+  styleUrls: ['./list-reservesalle.component.scss']
 })
-export class ListReserveRoomComponent implements OnInit {
+export class ListReservesalleComponent implements OnInit {
 
   estCeQuilEstLa= false;
   reservesalles :ReserveSalle[] = [];
@@ -25,7 +25,7 @@ export class ListReserveRoomComponent implements OnInit {
     this.filteredReserveSalles= this.filterReserveSalleByName(value);
   }
 
-  constructor(private http: HttpClient, private reserveSalleService: ReserveSalleService, private router:Router) {
+  constructor(private http: HttpClient, private reserveSalleService: ReservesalleService, private router:Router) {
     //this.reservesalles=[];
   }
 
@@ -42,7 +42,7 @@ export class ListReserveRoomComponent implements OnInit {
   }
 
   addReserveSalle():void {
-    this.router.navigateByUrl("reserve-room");
+    this.router.navigateByUrl("add-reservesalle");
     //this.filteredReserveSalles = this.filterReserveSalleByName(this._filterText);
   }
 

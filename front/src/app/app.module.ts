@@ -11,11 +11,11 @@ import { AdminComponent } from "./admin/admin.component";
 import { PubliqueComponent } from "./publique/publique.component";
 import { ListSalleComponent } from "./list-salle/list-salle.component";
 import { AddSalleComponent } from "./add-salle/add-salle.component";
-import { ReserveRoomComponent } from './reserve-room/reserve-room.component';
+import { AddReservesalleComponent } from './add-reservesalle/add-reservesalle.component';
 import { EditUserComponent } from "./edit-user/edit-user.component";
 import { EditSalleComponent } from "./edit-salle/edit-salle.component";
-import { ListReserveRoomComponent } from './list-reserve-room/list-reserve-room.component';
-import { EditReserveRoomComponent } from "./edit-reserve-room/edit-reserve-room.component";
+import { ListReservesalleComponent } from './list-reservesalle/list-reservesalle.component';
+import { EditReservesalleComponent } from "./edit-reservesalle/edit-reservesalle.component";
 import { FilterPipe } from './filter.pipe';
 import { IgxTimePickerModule, IgxInputGroupModule, IgxIconModule } from "igniteui-angular";
 
@@ -28,13 +28,13 @@ import { IgxTimePickerModule, IgxInputGroupModule, IgxIconModule } from "igniteu
     PubliqueComponent,
     ListSalleComponent,
     AddSalleComponent,
-    ReserveRoomComponent,
+    AddReservesalleComponent,
     ListSalleComponent,
     ListSalleComponent,
     EditUserComponent,
     EditSalleComponent,
-    ListReserveRoomComponent,
-    EditReserveRoomComponent,
+    ListReservesalleComponent,
+    EditReservesalleComponent,
     FilterPipe,
   ],
   imports: [

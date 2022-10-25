@@ -21,7 +21,7 @@ public class ReserveSalleController {
         this.ReserveSalleDAO = ReserveSalleDAO;
     }
 
-    @GetMapping("/list-reserve-room")
+    @GetMapping("/list-reservesalle")
     public List<ReserveSalle> listReserveSalles() {
         Iterable<ReserveSalle> it = ReserveSalleDAO.findAll();
         List <ReserveSalle> reservesalles = new ArrayList<>();
@@ -34,7 +34,7 @@ public class ReserveSalleController {
         ReserveSalleDAO.deleteById(id);
     }
 
-    @PostMapping("/reserve-room") //// need change add User func
+    @PostMapping("/add-reservesalle") //// need change add User func
     public void addReserveSalle(@RequestBody ReserveSalle reservesalle) {
         ReserveSalleDAO.save(reservesalle);
     }
