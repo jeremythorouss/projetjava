@@ -23,8 +23,8 @@ Les fonctionnalités suivantes seront requises :
 - Inviter des membres à la salle de réunion
 - Envoyer des e-mails aux membres invités (avec une carte ICS pouvant être lier à un calendrier)
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/1.png)<br>
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/2.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/1.png)<br>
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/2.png)
 
 \*\*Partie publique :flags: :
 
@@ -32,7 +32,7 @@ Les fonctionnalités suivantes seront requises :
 - Voir les membres d'une réunion
 - Réserver une salle
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/3.png)
 
 ## For running the projet: ⬇️⬇️⬇️<br>
 
@@ -120,11 +120,11 @@ Jean , né le 10/05/1995 d'addresse email jean@paul.com
 
 Nous allons pour cela dans le menu admin puis gestion des membres
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/4.png)
 
 Nous arrivons ensuite a une liste d'utilisateur qui a été générée précédemment
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/5.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/5.png)
 
 Nous remplissons les informations en cliquant sur le boutons ajouter membre
 Et nous arrivons à ceci
@@ -135,61 +135,61 @@ Nous appuyons sur le boutons edit
 
 Nous pouvons ainsi modifier les informations  et appuyer sur ajouter à nouveau
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/6.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/6.png)
 
 malheureusement, il se trouve que Jeanne doit quitter l'entreprise
 
 Nous appuyons ensuite sur le bouton delete.
 
 Nous arrivons à nouveau ici
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/2.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/2.png)
 
 Mais il y a trop d'utilisateur en vue, nous souhaitons juste avoir le collaborateur "Harry Covert"
 Pour cela, dans l'onglet recherche en bas, on tape "Harry"
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/7.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/7.png)
 
 ## exigence Créer et éditer un membre
 
 Nous souhaitons ajouter une salle
 Nous allons pour cela dans le menu admin puis gestions des salles
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/4.png)
 
 Nous arrivons ici
 
 On veut ajouter la salle: Harrold, de type salle1 , pouvant contenir 84 personnes et possédant une caméra
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/7.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/7.png)
 
 Nous appuyons sur ajouter une salle
 
 Nous remplissons les informations , puis appuyons sur ajouter
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/9.png)
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/10.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/9.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/10.png)
 
 Il se trouve qu'il y a eu une erreur, et qu'en fait la salle avait un projecteur et non une caméra
 
 On va dans edit puis on appuie sur ajouter
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/11.png)
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/12.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/11.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/12.png)
 
 En fait, il y a un probleme, la salle est toujours en construction, on peut donc l'enelever avec le bouton delete
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/8.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/8.png)
 
 ## exigence reserver une salle
 
 Nous souhaitons reserver la salle Harrold a 10h le  28/10/2022 jusqu'au  29/10/2022 pour Jeanne 
 
 Nous cliquons sur reserver une salle et remplissons les informations
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/13.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/13.png)
 
 Il se trouve que nous souhaitons editer cette reservation et la faire commencer au  27/10/2022
 Nous modifions donc les parametre avec le boutons edit
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/14.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/14.png)
 
 Si la réunion est annulée , un simple pression de delete suffit
 
@@ -197,44 +197,44 @@ Si la réunion est annulée , un simple pression de delete suffit
 
 Nous allons ici dans l'onglet "Voir quelle salle est libre"
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/4.png)
 
 pour voir une salle particuliere dans le filtre en haut, on note le nom de la salle cherchée
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/15.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/15.png)
 
 ## exigence Inviter des membres à la salle de réunion
 Nous allons ici dans l'onglet "inviter des membres"
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/4.png)
 
 Nous allons ajouter un membre(Pierre) à la réunion dans la salle Harrold, nous allons sur le boutons edit, ecrivons les informations pui sur ajouter
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/16.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/16.png)
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/17.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/17.png)
 
 
 ## exigence Voir le calendrier d'une salle de réunion 
 Aller dans la partie publique
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/3.png)
 
 On veut voir par exemple l'emploi du temps de la salletest
 
 On rentre dans le filtre 'salletest'
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/18.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/18.png)
 
 On part du principe ici que la salle est toujours libre si elle n'est pas réservée
 
 ## exigence Voir membres d'une réunion
 
 Aller dans la partie publique
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/3.png)
 
 et sur la colonne "Name", nous avons les membres de chaque réservation
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/18.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/18.png)
 
 
 
@@ -243,12 +243,12 @@ et sur la colonne "Name", nous avons les membres de chaque réservation
 Nous souhaitons reserver la salle Harrold a 10h le  28/10/2022 jusqu'au  29/10/2022 pour Jeanne
 
 Nous cliquons sur reserver une salle et remplissons les informations
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/13.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/13.png)
 
 Il se trouve que nous souhaitons editer cette reservation et la faire commencer au  27/10/2022
 Nous modifions donc les parametre avec le boutons edit
 
-![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/14.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/14.png)
 
 Si la réunion est annulée , un simple pression de delete suffit
