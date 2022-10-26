@@ -35,13 +35,13 @@ export class AddSalleComponent implements OnInit {
   }
   imageOnClick(pictureName : String){
 
-    var amphiPicture = document.getElementById("image1")
+    var amphiPicture = document.getElementById("image1.jpg")
     if(amphiPicture != null){
       amphiPicture.style.width = "150px";
       amphiPicture.style.height = "90px";
     }
 
-    var roomPicture = document.getElementById("image2")
+    var roomPicture = document.getElementById("image2.jpg")
     if(roomPicture != null){
       roomPicture.style.width = "150px";
       roomPicture.style.height = "90px";
