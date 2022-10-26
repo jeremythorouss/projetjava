@@ -45,11 +45,15 @@ public class Salle {
         this.capacite = capacite;
     }
 
-    public String getEquipement() {
-        return equipement;
+    public void setEquipement(String equipement) {
+        this.equipement = equipement;
     }
 
-    public void setEquipement(String equipement) {
+    public Salle(Long id, String name, String photo, int capacite, String equipement) {
+        this.id = id;
+        this.name = name;
+        this.photo = photo;
+        this.capacite = capacite;
         this.equipement = equipement;
     }
 
@@ -67,36 +71,35 @@ public class Salle {
         return Objects.hash(id, name, photo, capacite, equipement);
     }
 
-    @Override
-    public String toString() {
-        return "Salle{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", photo=" + photo +
-                ", capacite=" + capacite +
-                ", equipement='" + equipement + '\'' +
-                '}';
-    }
-
-    public Salle(Long id, String name, String photo, int capacite, String equipement) {
-        this.id = id;
-        this.name = name;
-        this.photo = photo;
-        this.capacite = capacite;
-        this.equipement = equipement;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name")
     private String name;
+
+    @Override
+    public String toString() {
+        return "Salle{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", photo='" + photo + '\'' +
+                ", capacite=" + capacite +
+                ", equipement='" + equipement + '\'' +
+                '}';
+    }
+
     @Column(name="photo")
     private String  photo;
     @Column(name = "capacite")
     private int capacite;
     @Column(name = "equipement")
     private String equipement;
+
+    public String getEquipement() {
+        return equipement;
+    }
+
+
 
     public Salle() {
     }
