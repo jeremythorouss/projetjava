@@ -1,6 +1,5 @@
 # Réservation de salles de réunion :star2: :
 
-===========
 Une application de réservation de salles.
 Une section `publique` et une section `administration`.
 
@@ -9,7 +8,7 @@ Chaque salle de réunion a un dashboard où tout le monde peut voir les disponib
 
 Les fonctionnalités suivantes seront requises :
 
-\*\* Panneau d'administration :memo: :
+\*\*Panneau d'administration :memo: :
 
 - Créer et éditer un membre: nom, e-mail, date de naissance, id
 - Créer et éditer une salle : nom, photo, capacité (X personnes), équipement (écran, tableau, ...), id
@@ -18,20 +17,18 @@ Les fonctionnalités suivantes seront requises :
 - Inviter des membres à la salle de réunion
 - Envoyer des e-mails aux membres invités (avec une carte ICS pouvant être lier à un calendrier)
 
-![image](https://github.com/lexsaints/powershell/blob/main/IMG/1.png)<br>
-![image](https://github.com/lexsaints/powershell/blob/main/IMG/2.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/1.png)<br>
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/2.png)
 
-\*\* Partie publique :flags: :
+\*\*Partie publique :flags: :
 
 - Voir le calendrier d'une salle de réunion (filtre dans le page "list-reservesalle")
 - Voir les membres d'une réunion
 - Réserver une salle
 
-![image](https://github.com/jeremythorouss/projetjava/main/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
 
-## For running the projet:<br>
-
-===========
+## For running the projet: ⬇️⬇️⬇️<br>
 
 ## Backend :spades:
 
