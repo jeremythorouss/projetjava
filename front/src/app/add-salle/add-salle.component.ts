@@ -33,6 +33,34 @@ export class AddSalleComponent implements OnInit {
     this.salleService.addSalle(salle).subscribe();
     setTimeout(()=>this.router.navigateByUrl('/list-salles'), 1000)
   }
+  imageOnClick(pictureName : String){
+
+    var amphiPicture = document.getElementById("image1")
+    if(amphiPicture != null){
+      amphiPicture.style.width = "150px";
+      amphiPicture.style.height = "90px";
+    }
+
+    var roomPicture = document.getElementById("image2")
+    if(roomPicture != null){
+      roomPicture.style.width = "150px";
+      roomPicture.style.height = "90px";
+    }
+
+
+    console.log(pictureName === "image1.jpg")
+    if(pictureName ==="amphi.png" && amphiPicture != null){
+      amphiPicture.style.width = "200px";
+      amphiPicture.style.height = "110px";
+      console.log("amphi")
+    }
+    else if(pictureName === "image2.jpg" && roomPicture != null){
+      roomPicture.style.width = "200px";
+      roomPicture.style.height = "110px";
+    }
+
+
+  }
 
 
 }

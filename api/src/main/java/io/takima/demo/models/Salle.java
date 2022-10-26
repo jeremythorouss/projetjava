@@ -29,14 +29,6 @@ public class Salle {
         this.name = name;
     }
 
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
     public int getCapacite() {
         return capacite;
     }
@@ -49,26 +41,6 @@ public class Salle {
         this.equipement = equipement;
     }
 
-    public Salle(Long id, String name, String photo, int capacite, String equipement) {
-        this.id = id;
-        this.name = name;
-        this.photo = photo;
-        this.capacite = capacite;
-        this.equipement = equipement;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Salle)) return false;
-        Salle salle = (Salle) o;
-        return capacite == salle.capacite && Objects.equals(id, salle.id) && Objects.equals(name, salle.name) && Objects.equals(photo, salle.photo) && Objects.equals(equipement, salle.equipement);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, photo, capacite, equipement);
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,19 +48,44 @@ public class Salle {
     @Column(name = "name")
     private String name;
 
+    public void setPhoto(int photo) {
+        this.photo = photo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Salle)) return false;
+        Salle salle = (Salle) o;
+        return photo == salle.photo && capacite == salle.capacite && Objects.equals(id, salle.id) && Objects.equals(name, salle.name) && Objects.equals(equipement, salle.equipement);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, photo, capacite, equipement);
+    }
+
     @Override
     public String toString() {
         return "Salle{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", photo='" + photo + '\'' +
+                ", photo=" + photo +
                 ", capacite=" + capacite +
                 ", equipement='" + equipement + '\'' +
                 '}';
     }
 
+    public Salle(Long id, String name, int photo, int capacite, String equipement) {
+        this.id = id;
+        this.name = name;
+        this.photo = photo;
+        this.capacite = capacite;
+        this.equipement = equipement;
+    }
+
     @Column(name="photo")
-    private String  photo;
+    private int  photo;
     @Column(name = "capacite")
     private int capacite;
     @Column(name = "equipement")
@@ -102,7 +99,5 @@ public class Salle {
 
     public Salle() {
     }
-
-
 
 }

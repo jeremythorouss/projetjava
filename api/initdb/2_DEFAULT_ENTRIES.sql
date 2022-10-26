@@ -10,4 +10,4 @@ INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (9, 'Thomas', 'O
 INSERT INTO defaultdb.users (id, name, email, birthdate) VALUES (10, 'Sacha', 'Telfrize', null);
 
 
-INSERT INTO defaultdb.salles (id, name, photo,  capacite , equipement) VALUES (1,'salle',null,10,'projecteur');
+INSERT INTO defaultdb.salles (id, name, photo,  capacite , equipement) VALUES (1,'salle',1,10,'projecteur');

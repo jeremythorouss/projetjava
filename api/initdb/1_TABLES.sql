@@ -16,7 +16,7 @@ create table salles
     constraint salles_pk
         primary key (id),
     name varchar(255) not null,
-    photo varchar(255) null,
+    photo bigint null,
     capacite int null,
     equipement varchar(255)  null
 );
