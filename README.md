@@ -78,3 +78,67 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 [!] Attention: Better to use Chrome to see the application, Firefox block some function to show.
+
+# Dans la pratique :star2: :
+
+[!] Attention:Toujours utiliser google Chrome 
+
+## Frontend :diamonds:
+
+utilisez la commande `ng serve`
+
+## Backend :diamonds:
+Lancez dockerhub en arrière plan 
+
+rentrez dans la console cette ligne
+
+docker run --name mariadb --rm -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=defaultdb -p 3306:3306 mariadb
+
+Puis executez les deux fichiers de paramétrages de la base de données: TABLES et DEFAULT_ENTRIES
+
+Puis executez le fichier APP
+
+Puis allez sur le lien http://localhost:4200
+
+
+# Ce qui a été fait :star2: :
+
+Nous allons maintenant passer à la présentation de l'application:
+
+## exigence Créer et éditer un membre
+
+Nous souhaitons tout d'abord ajouter un utilisateur 
+Jean , né le 10/05/1995 d'addresse email jean@paul.com
+
+Nous allons pour cela dans le menu admin puis gestion des membres
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+
+Nous arrivons ensuite a une liste d'utilisateur qui a été générée précédemment
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/5.png)
+
+Nous remplissons les informations en cliquant sur le boutons ajouter membre
+Et nous arrivons à ceci
+
+Sauf que finalement, on se dit que en fait ce n'est pas jean mais jeanne que nous voulions écrire 
+
+Nous appuyons sur le boutons edit 
+
+Nous pouvons ainsi modifier les informations  et appuyer sur ajouter à nouveau
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/6.png)
+
+malheureusement, il se trouve que Jeanne doit quitter l'entreprise
+
+Nous appuyons ensuite sur le bouton delete.
+
+Nous arrivons à nouveau ici
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/2.png)
+
+Mais il y a trop d'utilisateur en vue, nous souhaitons juste avoir le collaborateur "Harry Covert"
+Pour cela, dans l'onglet recherche en bas, on tape "Harry"
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/7.png)
+
+## exigence Créer et éditer un membre
