@@ -8,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PubliqueComponent implements OnInit {
 
-  estCeQuilEstLa= false;
 
-  showMe() {
-    this.estCeQuilEstLa=!this.estCeQuilEstLa;
-  }
 
   ngOnInit() {
   }

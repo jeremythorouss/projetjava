@@ -10,11 +10,6 @@ import {UserService} from "../services/user.service";
 })
 export class AdminComponent implements OnInit {
 
-  estCeQuilEstLa= false;
-
-  showMe() {
-    this.estCeQuilEstLa=!this.estCeQuilEstLa;
-  }
 
   ngOnInit() {
   }
