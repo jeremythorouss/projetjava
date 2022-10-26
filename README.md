@@ -1,4 +1,10 @@
 # Réservation de salles de réunion :star2: :
+Travail realisé par :
+-  Meini Xue
+-  Ren Ying
+-  Thorouss Jérémy
+
+Ci dessous un récapitulatif du projet puis plus bas une description un peu plus pratique
 
 Une application de réservation de salles.
 Une section `publique` et une section `administration`.
@@ -79,9 +85,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [!] Attention: Better to use Chrome to see the application, Firefox block some function to show.
 
-# Dans la pratique :star2: :
+# Dans la pratique Installation :star2: :
 
 [!] Attention:Toujours utiliser google Chrome 
+
+[!] Attention: Toujours utiliser la branche master pour les clonages dans le cadre d'une évaluation, les lignes suivantes ont été uniquement realisées sur la branche master
 
 ## Frontend :diamonds:
 
@@ -101,7 +109,7 @@ Puis executez le fichier APP
 Puis allez sur le lien http://localhost:4200
 
 
-# Ce qui a été fait :star2: :
+# Deroule operationnel :star2: :
 
 Nous allons maintenant passer à la présentation de l'application:
 
@@ -142,3 +150,105 @@ Pour cela, dans l'onglet recherche en bas, on tape "Harry"
 ![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/7.png)
 
 ## exigence Créer et éditer un membre
+
+Nous souhaitons ajouter une salle
+Nous allons pour cela dans le menu admin puis gestions des salles
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+
+Nous arrivons ici
+
+On veut ajouter la salle: Harrold, de type salle1 , pouvant contenir 84 personnes et possédant une caméra
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/7.png)
+
+Nous appuyons sur ajouter une salle
+
+Nous remplissons les informations , puis appuyons sur ajouter
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/9.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/10.png)
+
+Il se trouve qu'il y a eu une erreur, et qu'en fait la salle avait un projecteur et non une caméra
+
+On va dans edit puis on appuie sur ajouter
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/11.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/12.png)
+
+En fait, il y a un probleme, la salle est toujours en construction, on peut donc l'enelever avec le bouton delete
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/8.png)
+
+## exigence reserver une salle
+
+Nous souhaitons reserver la salle Harrold a 10h le  28/10/2022 jusqu'au  29/10/2022 pour Jeanne 
+
+Nous cliquons sur reserver une salle et remplissons les informations
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/13.png)
+
+Il se trouve que nous souhaitons editer cette reservation et la faire commencer au  27/10/2022
+Nous modifions donc les parametre avec le boutons edit
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/14.png)
+
+Si la réunion est annulée , un simple pression de delete suffit
+
+## exigence Voir quelles salles sont libres
+
+Nous allons ici dans l'onglet "Voir quelle salle est libre"
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+
+pour voir une salle particuliere dans le filtre en haut, on note le nom de la salle cherchée
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/15.png)
+
+## exigence Inviter des membres à la salle de réunion
+Nous allons ici dans l'onglet "inviter des membres"
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/4.png)
+
+Nous allons ajouter un membre(Pierre) à la réunion dans la salle Harrold, nous allons sur le boutons edit, ecrivons les informations pui sur ajouter
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/16.png)
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/17.png)
+
+
+## exigence Voir le calendrier d'une salle de réunion 
+Aller dans la partie publique
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+
+On veut voir par exemple l'emploi du temps de la salletest
+
+On rentre dans le filtre 'salletest'
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/18.png)
+
+On part du principe ici que la salle est toujours libre si elle n'est pas réservée
+
+## exigence Voir membres d'une réunion
+
+Aller dans la partie publique
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+
+et sur la colonne "Name", nous avons les membres de chaque réservation
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/18.png)
+
+
+
+## exigence Réserver une salle
+
+Nous souhaitons reserver la salle Harrold a 10h le  28/10/2022 jusqu'au  29/10/2022 pour Jeanne
+
+Nous cliquons sur reserver une salle et remplissons les informations
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/3.png)
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/13.png)
+
+Il se trouve que nous souhaitons editer cette reservation et la faire commencer au  27/10/2022
+Nous modifions donc les parametre avec le boutons edit
+
+![image](https://github.com/jeremythorouss/projetjava/blob/testscss/IMG/14.png)
+
+Si la réunion est annulée , un simple pression de delete suffit
