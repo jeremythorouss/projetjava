@@ -108,6 +108,7 @@ Puis executez le fichier APP
 
 Puis allez sur le lien http://localhost:4200
 
+N'hésitez pas à naviguer sur la barre du haut de l'écran
 
 # Deroule operationnel :star2: :
 
