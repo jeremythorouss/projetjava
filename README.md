@@ -149,7 +149,7 @@ Pour cela, dans l'onglet recherche en bas, on tape "Harry"
 
 ![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/7.png)
 
-## exigence Créer et éditer un membre
+## exigence Créer et éditer une salle
 
 Nous souhaitons ajouter une salle
 Nous allons pour cela dans le menu admin puis gestions des salles
@@ -159,8 +159,6 @@ Nous allons pour cela dans le menu admin puis gestions des salles
 Nous arrivons ici
 
 On veut ajouter la salle: Harrold, de type salle1 , pouvant contenir 84 personnes et possédant une caméra
-
-![image](https://github.com/jeremythorouss/projetjava/blob/main/IMG/7.png)
 
 Nous appuyons sur ajouter une salle
 
